@@ -1,0 +1,19 @@
+.. ard-e index dosyası.
+   24.02.2017 tarihinde oluşturuldu.
+
+
+.. image:: _static/title.png
+  :align: center
+
+.. toctree::
+   :maxdepth: 2
+
+   arduino
+
+
+Yararlı Sayfalar
+----------------
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
