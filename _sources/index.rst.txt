@@ -14,13 +14,11 @@
    arduino
    functions
 
-.. disqus::
-  :disqus_identifier: ana_sayfa
-
-
 Yararlı Sayfalar
 ----------------
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. disqus::
