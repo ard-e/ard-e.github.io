@@ -150,3 +150,7 @@ Arduino IDE'deki işlevsel kısayol butonlarına değinmiştik. Bu butonlar da a
 3. Yüklemeyi yapacağımız kartı seçtiğimiz buton. Bilgisayarda bağlı olan kartlar burada listelenir.
 4. Daha fazla seçenek sunan buton. Örneğin Kaydet, Farklı Kaydet, Taslağı İndir gibi. Kayıt etme işlemi online olarak hesabınıza kayıt olarakgerçekleşiyor.
 5. Taslağımızı -programımızı- link olarak paylaşmak ve sitemize gömmek için kullanabileceğimiz buton.
+
+
+.. disqus::
+  :disqus_identifier: arduino

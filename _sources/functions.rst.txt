@@ -1219,3 +1219,4 @@ Rastgele Sayılar
 
 
 .. disqus::
+  :disqus_identifier: functions

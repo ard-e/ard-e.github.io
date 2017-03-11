@@ -22,3 +22,4 @@ Yararlı Sayfalar
 * :ref:`search`
 
 .. disqus::
+  :disqus_identifier: ana_sayfa
