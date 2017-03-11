@@ -1,14 +1,21 @@
 .. ard-e index dosyası.
    24.02.2017 tarihinde oluşturuldu.
 
+.. sectionauthor:: Buğra İşgüzar <biisguzar@gmail.com>
 
 .. image:: _static/title.png
   :align: center
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 9
+   :numbered:
+   :caption: İçerik
 
    arduino
+   functions
+
+.. disqus::
+  :disqus_identifier: ana_sayfa
 
 
 Yararlı Sayfalar
