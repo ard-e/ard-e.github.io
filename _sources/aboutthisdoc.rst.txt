@@ -1,0 +1,12 @@
+.. ard-e dökümanı hakkında
+   19.03.2017 tarihinde oluşturuldu
+
+============
+Ard-e Nedir?
+============
+
+Ard-e ismi Wall-E[1]_ filminden esinlenilerek bulundu. Aslında ilk amacı şuan okuduğunuz dökümanı oluşturmaktı ancak ozamanlar ilk projem olan RF
+
+
+
+.. [1]:: https://en.m.wikipedia.org/wiki/WALL-E

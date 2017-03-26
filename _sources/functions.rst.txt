@@ -1188,33 +1188,394 @@ orantılı olarak hesaplanabilir. Örneğin 153 değeri 3V'a eşdeğerdir.
 
 .. Note:: digitalWrite() kullanmadan önce pinMode() ile mod ataması yapılması gerekmez.
 
---------------------
-Gelişmiş Giriş/Çıkış
---------------------
-
 ----------
 Zaman/Süre
 ----------
+
+^^^^^^^^
+millis()
+^^^^^^^^
+
+Arduino'nun çalışmaya başlamasından sonra geçen zamanı milisaniye cinsinden sayar.
+
+.. Caution::
+  Yaklaşık 50 gün boyunca Arduino sorunsuz çalışacak ve millis() fonksiyonu süreyi tutacak olur ise hafızası dolacak ve tekrar sıfıra dönecektir.
+  Bunun sebebi **unsigned long** veri tipini kullanmasıdır.
+
+.. code-block:: arduino
+
+  unsigned long zaman;
+
+  void setup(){
+    Serial.begin(9600); //seri iletişimi başlatıyoruz
+                        //iletişim başlığında değineceğiz
+  }
+
+  void loop(){
+    Serial.print("Geçen Zaman: ");
+    zaman = millis();
+    Serial.println(zaman); //geçen süreyi yazdırdık
+  }
+
+
+^^^^^^^^
+micros()
+^^^^^^^^
+
+Arduino'nun çalışmaya başlamasından sonra geçen zamanı mikrosaniye cinsinden sayar. millis() fonksiyonu ise milisaniye cinsinden sayıyordu. Daha hassas hesaplama
+gerektiren işlemlerde micros() fonksiyonunu tercih ediyoruz.
+
+1 milisaniye = 1.000 mikrosaniye
+1 saniye     = 1.000.000 mikrosaniye
+
+
+.. code-block:: arduino
+
+  unsigned long zaman;
+
+  void setup(){
+    Serial.begin(9600); //seri iletişimi başlatıyoruz
+                        //iletişim başlığında değineceğiz
+  }
+
+  void loop(){
+    Serial.print("Geçen Zaman: ");
+    zaman = micros();
+    Serial.println(zaman); //geçen süreyi yazdırdık
+  }
+
+.. Caution::
+  micros() fonksiyonu yaklaşık 70 dakika çalıştıktan sonra hafızası dolacağı için değerini sıfırlayacaktır ve tekrar saymaya başlayacaktır.
+  millis() fonksiyonunda bu süre yaklaşık 50gün.
+
+
+^^^^^^^
+delay()
+^^^^^^^
+
+Verdiğiniz sayı değeri kadar programın çalışmasını durdurur (milisaniye cinsinden). Eğer 1000 değerini verirsiniz programınız 1 saniye boyunca çalışmayacak,
+bekleme moduna geçecektir.
+
+.. code-block:: arduino
+
+  void setup(){
+    pinMode(LED_BUILTIN, OUTPUT);
+  }
+
+  void loop(){
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(1000);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(1000);
+  }
+
+Bu örneği Arduino kartınıza yüklediğinizde (ek bir şey takmanıza gerek yok) dahili LED'in bir saniye ara ile yanıp söndüğünü göreceksiniz.
+
+.. Attention::
+  delay() fonksiyonu çalıştığı sırada diğer tüm işlemler duracaktır. Oyüzden kullanılırken çok dikkatli olunması gerekir. Onun yerine millis() fonksiyonu ile
+  çalışma süresi kayıt edilip, daha sonra anlık süre ile arasındaki fark 1000 ise işlem yapılması aslında delay(1000) fonksiyonu ile aynı işlemi görecektir.
+  Ayrıca bu sırada diğer işlemler de devam edecektir.
+
+^^^^^^^^^^^^^^^^^^^
+delayMicroseconds()
+^^^^^^^^^^^^^^^^^^^
+
+Programımızı mikrosaniye cinsinden hassaslıkta durdurmamız gerektiğinde **delayMicroseconds()** fonksiyonunu kullanırız. Alabileceği en yüksek değer 16383'dür.
+
 
 ---------
 Matematik
 ---------
 
-------------
-Trigonometri
-------------
+^^^^^
+min()
+^^^^^
+
+İki sayısal değerden hangisi küçük ise o değeri döndürecektir.
+
+.. code-block:: arduino
+
+  sensor = min(sensor, 100); // sensor degiskeni, sensor ve 100'den hangisi küçükse o olacak
+                             // böylelikle sensor değeri asla 100'ü geçemeyecek
+
+
+^^^^^
+max()
+^^^^^
+
+**min()** fonksiyonunun tam tersi. İki sayısal değerden hangisi daha büyük ise o değeri döndürür.
+
+.. code-block:: arduino
+
+  sensor = max(sensor, 20); // sensor degiskeni, sensor ve 100'den hangisi büyükse o olacak
+                            // böylelikle değer 20den aşağıya hiç düşmeyecek
+
+^^^^^
+abs()
+^^^^^
+
+Sayının mutlak değerini almak için kullanılır.
+
++-------------+---------------+
+|    Durum    | Dönecek Değer |
++=============+===============+
+| x pozitifse |       x       |
++-------------+---------------+
+| x negatifse |       -x      |
++-------------+---------------+
+|      x = sayısal değer      |
++-----------------------------+
+
+.. code-block:: arduino
+
+  int sayi = 5;
+
+  sayi = abs(sayi); //sayi degeri suan 5
+  sayi = -5;        //degeri -5 yaptık
+  sayi = abs(sayi); //deger tekrar 5 oldu, çünkü |-5| = 5
+
+
+^^^^^^^^^^^
+constrain()
+^^^^^^^^^^^
+
+Bir sayısal değeri sınırlamak için kullanılır. Örnek ile daha iyi anlayabiliriz.
+
+.. code-block:: arduino
+
+  sensor = constrain(sensor, 10, 150);
+  // sensor degeri herzaman 10 ile 150 arasında olacak
+
+**Kullanım Şekli**
+
+constrain(x, a, b)
+
+**Parametreler**
+
+:X: Sınırlandırılacak Değer
+:A: Alt Sınır
+:B: Üst Sınır
+
+**Dönecek Değer**
+
+:X: eğer x, a ile b arasında ise
+:A: eğer x, a'dan küçük ise
+:B: eğer x, b'den büyük ise
+
+
+^^^^^
+map()
+^^^^^
+
+**map()** fonksiyonu sayının değer aralığını değiştirmek için kullanılır. Örneğin analog pinlerden okunan değer 0-1023 aralığındayken PWM pinlerden yazdırma
+aralığı 0-255'dir. Potansiyometreden okunan değeri LED'e yazdırmak için **map()** fonksiyonu ile gelen aralığı değiştirebiliriz.
+
+.. code-block:: arduino
+
+  void setup(){
+    //..
+  }
+
+  void loop(){
+    int deger = analogRead(0);
+    deger = map(val, 0, 1023, 0, 255);
+    analogWrite(9, val);
+  }
+
+*Bu örnekde okunan değerin 4'e bölünmesi de aynı işi görecektir ancak her zaman bu şekilde orantılı değerler okuyamayabilirsiniz. Bunun sadece örnek olduğunu *
+*unutmayalım*
+
+**Kullanım Şekli**
+
+map(x, y, z, t, u);
+
+**Parametreler**
+
+:x: mevcut değeriniz
+:y: mevcut değerinizin alabileceği en küçük değer
+:z: mevcut değerinizin alabileceği en yüksek değer
+:t: yeni değerinizin almasını istediğiniz en küçük değer
+:u: yeni değerinizin almasını istediğiniz en büyük değer
+
+**Teorisi**
+
+Eğer işin teorik kısmını da öğrenmek istiyorsanız fonksiyonun kaynak kodları aşağıda.
+
+.. code-block:: arduino
+
+  long map(long x, long in_min, long in_max, long out_min, long out_max){
+    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+  }
+
+
+^^^^^
+pow()
+^^^^^
+
+Üs alma işlemi için kullanılır.
+
+**Kullanım Şekli**
+
+pow(x, n);
+
+**Parametreler**
+
+:x: üssü alınacak sayı
+:n: üs
+
+
+^^^^^^
+sqrt()
+^^^^^^
+
+Karekök işlemi için kullanılır.
+
+**Kullanım Şekli**
+
+sqrt(sayi);
 
 --------------------
 String Değerlendirme
 --------------------
 
+^^^^^^^^^^^^^^^^
+isAlphaNumeric()
+^^^^^^^^^^^^^^^^
+
+Fonksiyona verdiğiniz String değişkeni alfanümerik [1]_ ise **True** sonuç döndürecektir. Aksi durumda **False** sonucu döndürecek.
+
+
+^^^^^^^^^
+isAlpha()
+^^^^^^^^^
+
+Kontrol ettiğiniz string harflerden oluşuyorsa **True** aksi durumlar söz konusu ise -stringin içinde rakam ya da özel karakter var ise- **False** değeri döndürecektir.
+
+^^^^^^^^^
+isDigit()
+^^^^^^^^^
+
+Kontrol ettiğiniz string rakamlardan oluşuyorsa **True** aksi durumlar söz konusu ise -stringin içinde harf ya da özel karakter var ise- **False** değeri döndürecektir.
+
+^^^^^^^^^^^^^
+isLowerCase()
+^^^^^^^^^^^^^
+
+Stringimiz küçük harflerden oluşuyor ise **True** değeri döndürecek, büyük harf içeriyorsa **False** değeri döndürecektir.
+
+^^^^^^^^^^^^^
+isUpperCase()
+^^^^^^^^^^^^^
+
+Stringimiz büyük harflerden oluşuyor ise **True** değeri döndürecek, küçük harf içeriyorsa **False** değeri döndürecektir.
+
+^^^^^^^^^^^^^^
+Örnek Uygulama
+^^^^^^^^^^^^^^
+
+**String Değerlendirme** başlığı altında gördüğümüz tüm fonksiyonları kapsayan bir uygulama örneği ile bu başlığı kapatalım. Bu örneği Arduino kartınıza yükleyip
+seri monitörü açarak kullanabilirsiniz. (Seri monitör konusuna **İletişim** başlığı altında detaylıca değineceğiz.)
+
+
+.. code-block:: arduino
+
+  /*
+    Character analysis operators
+
+    Examples using the character analysis operators.
+    Send any byte and the sketch will tell you about it.
+
+    created 29 Nov 2010
+    modified 2 Apr 2012
+    by Tom Igoe
+
+    edited by Buğra İşgüzar on 19.03.2017
+
+    This example code is in the public domain.
+    */
+
+ void setup() {
+    //Seri port bağlantımızı kuruyoruz
+    Serial.begin(9600);
+    while (!Serial) {
+      ;
+    }
+
+    // bağlantı kurulunca bildirim mesajı gönderiyoruz
+    Serial.println("byte gönder ve hakkında yorum yapayım");
+    Serial.println();
+  }
+
+  void loop() {
+    if (Serial.available() > 0) {
+      int karakter = Serial.read();
+
+      // gelen mesajı yazdıralım
+      Serial.print("Gönderdiğin byte: \'");
+      Serial.write(karakter);
+      Serial.print("\'  ASCII Değeri: ");
+      Serial.println(karakter);
+
+      // gelen veriyi analiz edelim
+      if (isAlphaNumeric(karakter)) {
+        Serial.println("bu karakter bir alfanümerik karakter");
+      }
+      if (isAlpha(karakter)) {
+        Serial.println("bu karakter bir harf ");
+      }
+      if (isDigit(karakter)) {
+        Serial.println("bu karakter bir rakam");
+      }
+      if (isLowerCase(karakter)) {
+        Serial.println("bu karakter küçük harf");
+      }
+      if (isUpperCase(karakter)) {
+        Serial.println("bu karakter büyük harf");
+      }
+
+      // yeni bir byte isteyelim
+      Serial.println();
+      Serial.println("Başka bir byte girin:");
+      Serial.println();
+    }
+  }
+
+.. [1] https://tr.wikipedia.org/wiki/Alfan%C3%BCmerik
+
 ----------------
 Rastgele Sayılar
 ----------------
 
---------
-İletişim
---------
+^^^^^^^^
+random()
+^^^^^^^^
+
+Rastgele sayı üretmenizi sağlar. İki değer alabildiği gibi tek değer de alabilir. Eğer tek değer verirseniz -verdiğiniz değere X diyelim- 0-X arasında rastgele
+sayı üretecektir. Eğer iki sayısal değer verirseniz verdiğiniz değerler arasında rastgele bir sayı seçecektir (maks değerin bir eksiği esas alınır).
+
+.. code-block:: arduino
+
+  long sayi;
+
+  void setup(){
+    Serial.begin(9600);
+  }
+
+  void loop() {
+    // 0-300 arasında sayı üretecektir
+    sayi = random(300);
+    Serial.println(sayi);
+
+    // 10 ile 19 arasında sayı üretecektir
+    sayi = random(10, 20);
+    Serial.println(sayi);
+
+    delay(50);
+  }
+
+---------------
+Seri Haberleşme
+---------------
 
 
 

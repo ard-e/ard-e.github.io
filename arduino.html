@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>1. Arduino &#8212; ard-e alpha belgelendirme çalışması</title>
+    <title>2. Arduino &#8212; ard-e alpha belgelendirme çalışması</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -29,14 +29,28 @@
     <script type="text/javascript" src="_static/disqus.js"></script>
     <link rel="index" title="Dizin" href="genindex.html" />
     <link rel="search" title="Ara" href="search.html" />
-    <link rel="next" title="4. Yapı" href="functions.html" />
-    <link rel="prev" title="Yararlı Sayfalar" href="index.html" />
+    <link rel="next" title="5. Yapı" href="functions.html" />
+    <link rel="prev" title="1. Ard-e Nedir?" href="aboutthisdoc.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  <link rel=”manifest” href=”/manifest.json”>
+  <script src=”https://cdn.onesignal.com/sdks/OneSignalSDK.js” async></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "18c9a893-4b9a-449a-ad52-265935a95845",
+      autoRegister: false,
+      notifyButton: {
+          enable: true /* Set to false to hide */
+        }
+    }]);
+  </script>
+
 
   </head>
   <body role="document">
@@ -70,7 +84,7 @@
 
             
   <div class="section" id="arduino">
-<h1>1. Arduino<a class="headerlink" href="#arduino" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<h1>2. Arduino<a class="headerlink" href="#arduino" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
 <p>Arduino geliştirdiğiniz yazılımlar ile elektriği kontrol edebilmenizi sağlayan aracı kartlardan biridir. Ancak Arduino sadece bir kart olmanın ötesinde,
 insanları bir şeyler üretmeye, kendi sorunlarını çözmeye yönlendirmiş ve son kullanıcının dahi kullanabileceği düzeyde ilerlemiştir. Bundan dolayı ona sadece geliştirme kartı demek saygısızlık olur diye düşünüyorum.</p>
 <div class="admonition-klasik-tarzda-tanim admonition">
@@ -79,19 +93,19 @@ insanları bir şeyler üretmeye, kendi sorunlarını çözmeye yönlendirmiş v
 Arduino ismi Ivrea kasabasının tarihi karakterlerinden Ivrealı Arduin&#8217;den gelmektedir. Ayrıca &#8220;Arduino&#8221; italyancada güçlü arkadaş anlamına gelmektedir.</p>
 </div>
 <div class="section" id="neden-arduino">
-<h2>1.1. Neden Arduino?<a class="headerlink" href="#neden-arduino" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>2.1. Neden Arduino?<a class="headerlink" href="#neden-arduino" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="uygun-fiyat">
-<h3>1.1.1. Uygun Fiyat<a class="headerlink" href="#uygun-fiyat" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>2.1.1. Uygun Fiyat<a class="headerlink" href="#uygun-fiyat" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Arduino&#8217;nun hedef kitlesi öğrenciler ve elektroniğe meraklı hobiciler olduğu için fiyatı da buna uygun. Ayrıca alternatif Arduino modellerini tercih ederek
 maliyeti minimuma indirebilirsiniz. Bu modellere Klon Arduino başlığı altında değineceğiz.</p>
 </div>
 <div class="section" id="kolay-programlama-dili-ve-ortami">
-<h3>1.1.2. Kolay Programlama Dili ve Ortamı<a class="headerlink" href="#kolay-programlama-dili-ve-ortami" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>2.1.2. Kolay Programlama Dili ve Ortamı<a class="headerlink" href="#kolay-programlama-dili-ve-ortami" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Arduino&#8217;yu programlamak için kullandığımız Arduino - Processing dili ve programlarımızı derleyip yüklememizi sağlayan Arduino IDE&#8217;yi öğrenmesi ve kullanması
 çok kolaydır.</p>
 </div>
 <div class="section" id="caprak-cross-platform">
-<h3>1.1.3. Çaprak (Cross) Platform<a class="headerlink" href="#caprak-cross-platform" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>2.1.3. Çaprak (Cross) Platform<a class="headerlink" href="#caprak-cross-platform" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Arduino IDE yazılımı Windows, Linux ve macOs işletim sistemlerinde çalışabilir. Dolayısıyla platform bağımlılığı olmadan Arduino&#8217;yu programlayabilirsiniz.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -100,7 +114,7 @@ maliyeti minimuma indirebilirsiniz. Bu modellere Klon Arduino başlığı altın
 </div>
 </div>
 <div class="section" id="arduino-ide">
-<h1>2. Arduino IDE<a class="headerlink" href="#arduino-ide" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<h1>3. Arduino IDE<a class="headerlink" href="#arduino-ide" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
 <p>Arduino IDE&#8217;yi öncelikle <a class="reference external" href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a> adresinden indirip kuralım. Kurulum aşamaları normal bir program kurulumundan farksız olduğu
 için bu kısmı açıklamadan atlıyoruz.</p>
 <p>Arduino IDE&#8217;yi açtığınız zaman sizi ilk olarak aşağıdaki ekran karşılayacaktır.</p>
@@ -120,7 +134,7 @@ için bu kısmı açıklamadan atlıyoruz.</p>
 <li>Çalıştığımız Arduino modeli ve bağlı olduğu usb port adresi.</li>
 </ol>
 <div class="section" id="islevsel-kisayol-butonlari">
-<h2>2.1. İşlevsel Kısayol Butonları<a class="headerlink" href="#islevsel-kisayol-butonlari" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>3.1. İşlevsel Kısayol Butonları<a class="headerlink" href="#islevsel-kisayol-butonlari" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <img alt="_images/ktuslari.png" src="_images/ktuslari.png" />
 <p>Bu butonları açıklamak gerekir ise soldan sağa,</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -145,7 +159,7 @@ için bu kısmı açıklamadan atlıyoruz.</p>
 </div>
 </div>
 <div class="section" id="arduino-create">
-<h1>3. Arduino Create<a class="headerlink" href="#arduino-create" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<h1>4. Arduino Create<a class="headerlink" href="#arduino-create" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
 <p>Arduino Create, Arduino ekibi tarafından hazırlanan ve sunulan, Arduino ile proje geliştiren kullanıcıların arasındaki iletişimi ve yardımlaşmayı arttırmayı
 hedefleyen online bir hizmettir.</p>
 <p>İçinde Arduino IDE benzeri program yazıp yüklememizi sağlayan araçlardan, yeni projeler keşfetmemizi sağlayacak sosyal paylaşım ortamına kadar birçok şey
@@ -184,7 +198,7 @@ biçilmiş kaftan.</td>
 </tbody>
 </table>
 <div class="section" id="arduino-web-editor">
-<h2>3.1. Arduino Web Editor<a class="headerlink" href="#arduino-web-editor" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>4.1. Arduino Web Editor<a class="headerlink" href="#arduino-web-editor" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <img alt="_images/webe1.png" class="align-center" src="_images/webe1.png" />
 <p>Bu resimde Web Editör sayfasını görüyoruz. Detaylara inmeden önce numaralandırdığım bölümleri size açıklamak istiyorum ki kafanızda şablon oluşsun.</p>
 <ol class="arabic simple">

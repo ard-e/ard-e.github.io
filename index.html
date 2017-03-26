@@ -29,13 +29,27 @@
     <script type="text/javascript" src="_static/disqus.js"></script>
     <link rel="index" title="Dizin" href="genindex.html" />
     <link rel="search" title="Ara" href="search.html" />
-    <link rel="next" title="1. Arduino" href="arduino.html" />
+    <link rel="next" title="1. Ard-e Nedir?" href="aboutthisdoc.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  <link rel=”manifest” href=”/manifest.json”>
+  <script src=”https://cdn.onesignal.com/sdks/OneSignalSDK.js” async></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "18c9a893-4b9a-449a-ad52-265935a95845",
+      autoRegister: false,
+      notifyButton: {
+          enable: true /* Set to false to hide */
+        }
+    }]);
+  </script>
+
 
   </head>
   <body role="document">
@@ -72,128 +86,153 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">İçerik</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="arduino.html">1. Arduino</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arduino.html#neden-arduino">1.1. Neden Arduino?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="arduino.html#uygun-fiyat">1.1.1. Uygun Fiyat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arduino.html#kolay-programlama-dili-ve-ortami">1.1.2. Kolay Programlama Dili ve Ortamı</a></li>
-<li class="toctree-l3"><a class="reference internal" href="arduino.html#caprak-cross-platform">1.1.3. Çaprak (Cross) Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aboutthisdoc.html">1. Ard-e Nedir?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arduino.html">2. Arduino</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arduino.html#neden-arduino">2.1. Neden Arduino?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arduino.html#uygun-fiyat">2.1.1. Uygun Fiyat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arduino.html#kolay-programlama-dili-ve-ortami">2.1.2. Kolay Programlama Dili ve Ortamı</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arduino.html#caprak-cross-platform">2.1.3. Çaprak (Cross) Platform</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arduino.html#arduino-ide">2. Arduino IDE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arduino.html#islevsel-kisayol-butonlari">2.1. İşlevsel Kısayol Butonları</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arduino.html#arduino-ide">3. Arduino IDE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arduino.html#islevsel-kisayol-butonlari">3.1. İşlevsel Kısayol Butonları</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="arduino.html#arduino-create">3. Arduino Create</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="arduino.html#arduino-web-editor">3.1. Arduino Web Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arduino.html#arduino-create">4. Arduino Create</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arduino.html#arduino-web-editor">4.1. Arduino Web Editor</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html">4. Yapı</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#demirbaslar">4.1. Demirbaşlar</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#setup">4.1.1. setup()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#loop">4.1.2. loop()</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">5. Yapı</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#demirbaslar">5.1. Demirbaşlar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#setup">5.1.1. setup()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#loop">5.1.2. loop()</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#kontrol-yapilari">4.2. Kontrol Yapıları</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#if">4.2.1. if</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#if-else">4.2.2. if...else</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#if-elif-else">4.2.3. if..elif..else</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#kontrol-yapilari">5.2. Kontrol Yapıları</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#if">5.2.1. if</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#if-else">5.2.2. if...else</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#if-elif-else">5.2.3. if..elif..else</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#sozdizimi">4.3. Sözdizimi</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#noktalivirgul">4.3.1. ; (noktalıvirgül)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#suslu-parantez">4.3.2. {} (süslü parantez)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#yorum-satiri">4.3.3. // (yorum satırı)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#coklu-yorum-satiri">4.3.4. /* */ (çoklu yorum satırı)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#define">4.3.5. #define</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#include">4.3.6. #include</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#sozdizimi">5.3. Sözdizimi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#noktalivirgul">5.3.1. ; (noktalıvirgül)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#suslu-parantez">5.3.2. {} (süslü parantez)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#yorum-satiri">5.3.3. // (yorum satırı)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#coklu-yorum-satiri">5.3.4. /* */ (çoklu yorum satırı)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#define">5.3.5. #define</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#include">5.3.6. #include</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#aritmetik-operatorler">4.4. Aritmetik Operatörler</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#atama">4.4.1. = (atama)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#ekleme">4.4.2. + (ekleme)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#cikarma">4.4.3. - (çıkarma)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#carpma">4.4.4. * (çarpma)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#bolme">4.4.5. / (bölme)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#aritmetik-operatorler">5.4. Aritmetik Operatörler</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#atama">5.4.1. = (atama)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#ekleme">5.4.2. + (ekleme)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#cikarma">5.4.3. - (çıkarma)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#carpma">5.4.4. * (çarpma)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#bolme">5.4.5. / (bölme)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#karsilastirma-operatorleri">4.5. Karşılaştırma Operatörleri</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#esitse">4.5.1. == (eşitse)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#esit-degilse">4.5.2. != (eşit değilse)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#kucukse">4.5.3. &lt; (küçükse)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#buyukse">4.5.4. &gt; (büyükse)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#kucuk-ya-da-esitse">4.5.5. &lt;= (küçük ya da eşitse)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#buyuk-ya-da-esitse">4.5.6. &gt;= (büyük ya da eşitse)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#karsilastirma-operatorleri">5.5. Karşılaştırma Operatörleri</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#esitse">5.5.1. == (eşitse)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#esit-degilse">5.5.2. != (eşit değilse)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#kucukse">5.5.3. &lt; (küçükse)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#buyukse">5.5.4. &gt; (büyükse)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#kucuk-ya-da-esitse">5.5.5. &lt;= (küçük ya da eşitse)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#buyuk-ya-da-esitse">5.5.6. &gt;= (büyük ya da eşitse)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#boolean-operatorleri">4.6. Boolean Operatörleri</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#ve">4.6.1. &amp;&amp; (ve)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#ve-ya">4.6.2. || (ve ya)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#olumsuzsa">4.6.3. ! (olumsuzsa)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#boolean-operatorleri">5.6. Boolean Operatörleri</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#ve">5.6.1. &amp;&amp; (ve)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#ve-ya">5.6.2. || (ve ya)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#olumsuzsa">5.6.3. ! (olumsuzsa)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#basitlestiren-operatorler">4.7. Basitleştiren Operatörler</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#artirma-azaltma">4.7.1. ++ (artırma) / &#8211; (azaltma)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#id7">4.7.2. += , -= , *= , /=</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html#degiskenler">5. Değişkenler</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#sabitler">5.1. Sabitler</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#high-low">5.1.1. HIGH | LOW</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#input-output">5.1.2. INPUT | OUTPUT</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#input-pullup-led-builtin">5.1.3. INPUT_PULLUP | LED_BUILTIN</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#veri-tipleri">5.2. Veri Tipleri</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#void">5.2.1. void</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#boolean">5.2.2. boolean</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#char">5.2.3. char</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#byte">5.2.4. byte</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#int">5.2.5. int</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#unsigned-int">5.2.6. unsigned int</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#word">5.2.7. word</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#long">5.2.8. long</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#unsigned-long">5.2.9. unsigned long</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#short">5.2.10. short</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#float">5.2.11. float</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#double">5.2.12. double</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#string">5.2.13. String</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#array">5.2.14. array</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#donusturme">5.3. Dönüştürme</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#id8">5.3.1. char()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#id9">5.3.2. byte()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#id10">5.3.3. int()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#id11">5.3.4. word()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#id12">5.3.5. long()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#id13">5.3.6. float()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#basitlestiren-operatorler">5.7. Basitleştiren Operatörler</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#artirma-azaltma">5.7.1. ++ (artırma) / &#8211; (azaltma)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#id7">5.7.2. += , -= , *= , /=</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="functions.html#fonksiyonlar">6. Fonksiyonlar</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#dijital-giris-cikis">6.1. Dijital Giriş/Çıkış</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#pinmode">6.1.1. pinmode()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#digitalwrite">6.1.2. digitalWrite()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#digitalread">6.1.3. digitalRead()</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html#degiskenler">6. Değişkenler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#sabitler">6.1. Sabitler</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#high-low">6.1.1. HIGH | LOW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#input-output">6.1.2. INPUT | OUTPUT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#input-pullup-led-builtin">6.1.3. INPUT_PULLUP | LED_BUILTIN</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#analog-giris-cikis">6.2. Analog Giriş/Çıkış</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#analodread">6.2.1. analodRead()</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions.html#analogwrite">6.2.2. analogWrite()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#veri-tipleri">6.2. Veri Tipleri</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#void">6.2.1. void</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#boolean">6.2.2. boolean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#char">6.2.3. char</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#byte">6.2.4. byte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#int">6.2.5. int</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#unsigned-int">6.2.6. unsigned int</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#word">6.2.7. word</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#long">6.2.8. long</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#unsigned-long">6.2.9. unsigned long</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#short">6.2.10. short</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#float">6.2.11. float</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#double">6.2.12. double</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#string">6.2.13. String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#array">6.2.14. array</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#gelismis-giris-cikis">6.3. Gelişmiş Giriş/Çıkış</a></li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#zaman-sure">6.4. Zaman/Süre</a></li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#matematik">6.5. Matematik</a></li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#trigonometri">6.6. Trigonometri</a></li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#string-degerlendirme">6.7. String Değerlendirme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#rastgele-sayilar">6.8. Rastgele Sayılar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="functions.html#iletisim">6.9. İletişim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#donusturme">6.3. Dönüştürme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#id8">6.3.1. char()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#id9">6.3.2. byte()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#id10">6.3.3. int()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#id11">6.3.4. word()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#id12">6.3.5. long()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#id13">6.3.6. float()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html#fonksiyonlar">7. Fonksiyonlar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#dijital-giris-cikis">7.1. Dijital Giriş/Çıkış</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#pinmode">7.1.1. pinmode()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#digitalwrite">7.1.2. digitalWrite()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#digitalread">7.1.3. digitalRead()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#analog-giris-cikis">7.2. Analog Giriş/Çıkış</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#analodread">7.2.1. analodRead()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#analogwrite">7.2.2. analogWrite()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#zaman-sure">7.3. Zaman/Süre</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#millis">7.3.1. millis()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#micros">7.3.2. micros()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#delay">7.3.3. delay()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#delaymicroseconds">7.3.4. delayMicroseconds()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#matematik">7.4. Matematik</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#min">7.4.1. min()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#max">7.4.2. max()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#abs">7.4.3. abs()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#constrain">7.4.4. constrain()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#map">7.4.5. map()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#pow">7.4.6. pow()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#sqrt">7.4.7. sqrt()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#string-degerlendirme">7.5. String Değerlendirme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#isalphanumeric">7.5.1. isAlphaNumeric()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#isalpha">7.5.2. isAlpha()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#isdigit">7.5.3. isDigit()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#islowercase">7.5.4. isLowerCase()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#isuppercase">7.5.5. isUpperCase()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#ornek-uygulama">7.5.6. Örnek Uygulama</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#rastgele-sayilar">7.6. Rastgele Sayılar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="functions.html#random">7.6.1. random()</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="functions.html#seri-haberlesme">7.7. Seri Haberleşme</a></li>
 </ul>
 </li>
 </ul>

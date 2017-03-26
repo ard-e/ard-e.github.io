@@ -42,6 +42,20 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
+  <link rel=”manifest” href=”/manifest.json”>
+  <script src=”https://cdn.onesignal.com/sdks/OneSignalSDK.js” async></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "18c9a893-4b9a-449a-ad52-265935a95845",
+      autoRegister: false,
+      notifyButton: {
+          enable: true /* Set to false to hide */
+        }
+    }]);
+  </script>
+
+
 
   </head>
   <body role="document">
