@@ -110,8 +110,6 @@ div.footer a {
     color: #888;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Droid+Sans:700');
-
 p.caption {
     font-family: 'Droid Sans', sans-serif;
     font-size: inherit;
@@ -165,7 +163,7 @@ div.sphinxsidebarwrapper p.blurb {
 
 div.sphinxsidebar h3,
 div.sphinxsidebar h4 {
-    font-family: 'Droid Sans', serif;
+    font-family: Ubuntu;
     color: #444;
     font-size: 24px;
     font-weight: normal;
@@ -209,7 +207,7 @@ div.sphinxsidebar ul li.toctree-l2 > a {
 
 div.sphinxsidebar input {
     border: 1px solid #CCC;
-    font-family: 'Droid Sans', serif;
+    font-family: Ubuntu;
     font-size: 1em;
 }
 
@@ -242,7 +240,7 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: 'Droid Sans', serif;
+    font-family: Ubuntu;
     font-weight: normal;
     margin: 30px 0px 10px 0px;
     padding: 0;
@@ -288,7 +286,7 @@ dd div.admonition {
 }
 
 div.admonition p.admonition-title {
-    font-family: 'Droid Sans', serif;
+    font-family: Ubuntu;
     font-weight: normal;
     font-size: 24px;
     margin: 0 0 10px 0;
@@ -615,6 +613,7 @@ a:hover tt, a:hover code {
         margin: 0;
         padding: 20px 30px;
         text-decoration:none;
+        font-family: 'Droid Sans', sans-serif;
     }
 
     div.documentwrapper {
