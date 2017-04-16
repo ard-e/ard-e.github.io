@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. Arduino &#8212; ard-e alpha belgelendirme çalışması</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/disqus.js"></script>
+    <link rel="index" title="Dizin" href="genindex.html" />
+    <link rel="search" title="Ara" href="search.html" />
+    <link rel="next" title="5. Neden Farklı Arduino Modelleri Var?" href="models.html" />
+    <link rel="prev" title="1. Ard-e Nedir?" href="aboutthisdoc.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Droid+Sans">
+
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  <link rel=”manifest” href=”/manifest.json”>
+  <script src=”https://cdn.onesignal.com/sdks/OneSignalSDK.js” async></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "18c9a893-4b9a-449a-ad52-265935a95845",
+      autoRegister: false,
+      notifyButton: {
+          enable: true /* Set to false to hide */
+        }
+    }]);
+  </script>
+
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+
+            
+            <p class="logo">
+              <a href="index.html">
+                <center>
+                <img class="logo" src="_static/logo.png" alt="Logo" height="250"/>
+                </center>
+                
+              </a>
+            </p>
+            
+
+            <div>
+              <center>
+
+
+              <hr>
+              <a href="index.html">ana sayfa</a> |
+              <a href="https://github.com/ard-e/ard-e.github.io">github adresi</a> |
+              <a href="_sources/arduino.rst.txt"
+                  rel="nofollow">ham sayfa</a>
+              <hr>
+             </center>
+            </p>
+
+            
+  <div class="section" id="arduino">
+<h1>2. Arduino<a class="headerlink" href="#arduino" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<p>Arduino geliştirdiğiniz yazılımlar ile elektriği kontrol edebilmenizi sağlayan aracı kartlardan biridir. Ancak Arduino sadece bir kart olmanın ötesinde,
+insanları bir şeyler üretmeye, kendi sorunlarını çözmeye yönlendirmiş ve son kullanıcının dahi kullanabileceği düzeyde ilerlemiştir. Bundan dolayı ona sadece geliştirme kartı demek saygısızlık olur diye düşünüyorum.</p>
+<div class="admonition-klasik-tarzda-tanim admonition">
+<p class="first admonition-title">Klasik Tarzda Tanım</p>
+<p class="last">Arduino, Kolombiyalı sanatçı ve programcı Hernando Barragan&#8217;ın Ivrea Tasarım enstütüsündeki tez çalışması olarak doğmuştur.
+Arduino ismi Ivrea kasabasının tarihi karakterlerinden Ivrealı Arduin&#8217;den gelmektedir. Ayrıca &#8220;Arduino&#8221; italyancada güçlü arkadaş anlamına gelmektedir.</p>
+</div>
+<div class="section" id="neden-arduino">
+<h2>2.1. Neden Arduino?<a class="headerlink" href="#neden-arduino" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<div class="section" id="uygun-fiyat">
+<h3>2.1.1. Uygun Fiyat<a class="headerlink" href="#uygun-fiyat" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<p>Arduino&#8217;nun hedef kitlesi öğrenciler ve elektroniğe meraklı hobiciler olduğu için fiyatı da buna uygun. Ayrıca alternatif Arduino modellerini tercih ederek
+maliyeti minimuma indirebilirsiniz. Bu modellere Klon Arduino başlığı altında değineceğiz.</p>
+</div>
+<div class="section" id="kolay-programlama-dili-ve-ortami">
+<h3>2.1.2. Kolay Programlama Dili ve Ortamı<a class="headerlink" href="#kolay-programlama-dili-ve-ortami" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<p>Arduino&#8217;yu programlamak için kullandığımız Arduino - Processing dili ve programlarımızı derleyip yüklememizi sağlayan Arduino IDE&#8217;yi öğrenmesi ve kullanması
+çok kolaydır.</p>
+</div>
+<div class="section" id="caprak-cross-platform">
+<h3>2.1.3. Çaprak (Cross) Platform<a class="headerlink" href="#caprak-cross-platform" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<p>Arduino IDE yazılımı Windows, Linux ve macOs işletim sistemlerinde çalışabilir. Dolayısıyla platform bağımlılığı olmadan Arduino&#8217;yu programlayabilirsiniz.</p>
+</div>
+<div class="section" id="genis-topluluk">
+<h3>2.1.4. Geniş Topluluk<a class="headerlink" href="#genis-topluluk" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<p>Arduino&#8217;nun topluluğu diğer geliştirme kartlarınınkine göre çok daha geniştir. Ülkemizde de oldukça geniş kullanım alanı olan Arduino hakkında Türkçe dökümanlara
+kolaylıkla ulaşabilir ve sorunlarınıza yanıtlar bulabilirsiniz.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="arduino-ide">
+<h1>3. Arduino IDE<a class="headerlink" href="#arduino-ide" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<p>Arduino IDE&#8217;yi öncelikle <a class="reference external" href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a> adresinden indirip kuralım. Kurulum aşamaları normal bir program kurulumundan farksız olduğu
+için bu kısmı açıklamadan atlıyoruz.</p>
+<p>Arduino IDE&#8217;yi açtığınız zaman sizi ilk olarak aşağıdaki ekran karşılayacaktır.</p>
+<div class="admonition caution">
+<p class="first admonition-title">Uyarı</p>
+<p class="last">Eğer Arduino IDE İngilizce ise File&gt;Preferences&gt;Editor language kısmından dili Türkçe yapabilirsiniz!</p>
+</div>
+<img alt="_images/ide1.png" class="align-center" src="_images/ide1.png" />
+<ol class="arabic simple">
+<li>Pencere Başlığı (Windows&#8217;un pencere yapısı ile alakalı. Bazı linux masaüstü ortamları ve macOs cihazlarda farklı yerlerde bulunabilir.)</li>
+<li>Arduino IDE Menüsü</li>
+<li>İşlevsel Kısayol Butonları</li>
+<li>Seri Ekran Butonu</li>
+<li>Arduino Taslakları (Sekme mantığıyla birden fazla açabilirsiniz.)</li>
+<li>Arduino Programımızı Yazdığımız Bölüm</li>
+<li>Sonuçları (hata ve uyarıları da) görebildiğimiz alan.</li>
+<li>Çalıştığımız Arduino modeli ve bağlı olduğu usb port adresi.</li>
+</ol>
+<div class="section" id="islevsel-kisayol-butonlari">
+<h2>3.1. İşlevsel Kısayol Butonları<a class="headerlink" href="#islevsel-kisayol-butonlari" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<img alt="_images/ktuslari.png" src="_images/ktuslari.png" />
+<p>Bu butonları açıklamak gerekir ise soldan sağa,</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Kontrol Et:</th><td class="field-body">Hazırladığınız uygulamayı derlemeden ve Arduino&#8217;ya yüklemeden kontrol etmenizi ve hataları tespit etmenizi sağlar.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Yükle:</th><td class="field-body">Arduino programınızı derleyip Arduino kartınıza yükler.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Yeni:</th><td class="field-body">Yeni pencerede, boş bir Arduino taslağı açar.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Aç:</th><td class="field-body">Kayıtlı Arduino taslağını açmak için kullanılır.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Kaydet:</th><td class="field-body">Arduino taslağını kayıt etmek için kullanılır.</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="arduino-create">
+<h1>4. Arduino Create<a class="headerlink" href="#arduino-create" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<p>Arduino Create, Arduino ekibi tarafından hazırlanan ve sunulan, Arduino ile proje geliştiren kullanıcıların arasındaki iletişimi ve yardımlaşmayı arttırmayı
+hedefleyen online bir hizmettir.</p>
+<p>İçinde Arduino IDE benzeri program yazıp yüklememizi sağlayan araçlardan, yeni projeler keşfetmemizi sağlayacak sosyal paylaşım ortamına kadar birçok şey
+bulunuyor. Ayrıca Create üzerinde programlarınızı kayıtlı tutabileceğiniz için Cross Platform (Çapraz Platform) başlığında bahsettiğimiz platform bağımsızlığı
+busefer cihaz bağımsızlığına dönüşüyor. Her cihazdan ufak bir eklenti kurmak şartı ile programlarınıza ulaşabiliyor, geliştirmeye devam edebiliyor ve kayıt
+edebiliyorsunuz.</p>
+<img alt="_images/create1.png" class="align-center" src="_images/create1.png" />
+<p><a class="reference external" href="https://create.arduino.cc/">https://create.arduino.cc/</a> adresinden giriş yaptıktan sonra bizi bu ekran, yani Arduino Create&#8217;nin ana ekranı karşılıyor. Bu ekrandaki kutucukları açıklamak
+istiyorum çünkü birçoğunu bundan sonra sıkça kullanacaksınız.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Arduino Web Editor:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Arduino programları hazırlayabileceğiniz, bulut ortamında kayıt edip daha sonra başka cihazlardan erişebileceğiniz ve en iyisi programlarınızı direk
+tarayıcı üzerinden Arduino kartınıza (bir eklenti kurarak) yükleyebileceğiniz online Arduino IDE ortamı.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Getting Started:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Arduino Web Editörü kullanmak için gereken eklentinin kurulumu gibi, bir kere yapmanızın yeteceği konularda size yol gösteriyor. Hızlı başlangıç sayfası.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Arduino Project Hub:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">Web Editorden sonra en işlevsel özelliklerinden birinin de bu olduğunu söylemeden geçemeyeceğim. Çevirisini <strong>Arduino Proje Merkezi</strong> olarak yapabiliriz.
+Adından da anlaşılacağı gibi herkesin projesini paylaşabildiği -ki bu paylaşım detaylıca, kullanılan malzemelerin listesi(var ise arduino.cc marketteki
+linki), yararlanılan kaynaklar (örn Arduino IDE) ve detaylı yapım aşaması- ve uğraş arayanların proje beğenip yapabildiği bir platform. Göz atmakta fayda
+var :)</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Need Help? Go to Forum:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Çözümünü bulamadığınız konuları bilen birilerine danışmak için kullanabileceğiniz resmi Arduino forumunun kısayol butonu. Ancak kullanılan dilin
+doğal olarak İngilizce olması umuyorum ki sizin için problem olmaz.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Arduino Store:</th><td class="field-body">Resmi Arduino mağazası. Ancak ürünler yurtdışından geleceği için kargo süresi ve ücreti can sıkabilir. Bizim için pek kullanışlı değil.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Arduino Cloud:</th><td class="field-body">Nesnelerin İnterneti (IoT) başlığı altında Arduino&#8217;larınızı birbirleri ve bir merkezle -kendisi Arduino Cloud oluyor- haberleştirmek isteyenler için
+biçilmiş kaftan.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="arduino-web-editor">
+<h2>4.1. Arduino Web Editor<a class="headerlink" href="#arduino-web-editor" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<img alt="_images/webe1.png" class="align-center" src="_images/webe1.png" />
+<p>Bu resimde Web Editör sayfasını görüyoruz. Detaylara inmeden önce numaralandırdığım bölümleri size açıklamak istiyorum ki kafanızda şablon oluşsun.</p>
+<ol class="arabic simple">
+<li>Taslak defteri olarak çevirebiliriz, 6 numaralı alandaki taslaklarımızın bulunduğu sekmeyi açar.</li>
+<li>Örnekler sekmesine geçer, basit-orta ve ileri düzey kod örneklerine ulaşabilirsiniz. (Arduino IDE&#8217;dekiler ile aynı.)</li>
+<li>Libraries yani kütüphaneler daha az kod ile daha çok iş yapabilmemiz için önceden hazırlanmış, projemize ekleyip kullanabileceğimiz hazır kod taslakları.</li>
+<li>Seri monitör, Arduino&#8217;muz ile seri iletişimdeyken gelen verileri okuyabileceğimiz ve veri gönderebileceğimiz ekran.</li>
+<li>Web Editörün yazı boyutu, rengi gibi ayarlamaları yapabileceğiniz tercihler sekmesi.</li>
+<li>Taslaklarımız, Arduino programlarımız.</li>
+<li>Bu alan 6. kısımdan sonra sağda kalan her tarafı kapsıyor. Açık olan Arduino projemizi düzenleyebileceğimiz alan.</li>
+</ol>
+<div class="admonition important">
+<p class="first admonition-title">Önemli</p>
+<img alt="_images/hata1.png" src="_images/hata1.png" />
+<p class="last">Bu sarı renkli uyarı sizinde dikkatinizi çekmiştir, bilgisayarımda eklentinin kurulu olmadığını dolayısıyla programı Arduino Kartına yükleyemeyeceğimi
+söylüyor. Ana menüdeki <strong>Getting Started</strong> bölümüne dönüp ya da <strong>Help</strong> butonuna basıp eklentiyi indirip kurduğum zaman görüntü aşağıdaki gibi oluyor ki
+normali bu.</p>
+</div>
+<img alt="_images/normal1.png" src="_images/normal1.png" />
+<p>Arduino IDE&#8217;deki işlevsel kısayol butonlarına değinmiştik. Bu butonlar da aynıları diyebiliriz, biraz daha farklı konumlandırılmış okadar.</p>
+<ol class="arabic simple" start="0">
+<li>Üstünde çalıştığımız Arduino programımızın başlığı.</li>
+<li>Programımızı yüklemeden denetlemek, hataları tespit etmek için kullandığımız doğrulama butonu.</li>
+<li>Yükleme butonu. Programımızı derleyip -eklenti sayesinde- Arduino kartımıza yüklememizi sağlayan buton.</li>
+<li>Yüklemeyi yapacağımız kartı seçtiğimiz buton. Bilgisayarda bağlı olan kartlar burada listelenir.</li>
+<li>Daha fazla seçenek sunan buton. Örneğin Kaydet, Farklı Kaydet, Taslağı İndir gibi. Kayıt etme işlemi online olarak hesabınıza kayıt olarakgerçekleşiyor.</li>
+<li>Taslağımızı -programımızı- link olarak paylaşmak ve sitemize gömmek için kullanabileceğimiz buton.</li>
+</ol>
+<div data-disqus-identifier="arduino" data-disqus-shortname="ard-e" id="disqus_thread"></div></div>
+</div>
+
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Ard-e Buğra İŞGÜZAR.
+      <br />
+      Ard-e Arduino dökümanlarının tamamının kopyalanması, kaynak gösterilmeden internet <br /> sitelerinde paylaşılması ve izin alınmadan  yazılı dökümanlarda kullanılması yasaktır.
+    </div>
+
+    
+  </body>
+</html>

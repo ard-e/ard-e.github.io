@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>5. Yapı &#8212; ard-e alpha belgelendirme çalışması</title>
+    <title>8. Yapı &#8212; ard-e alpha belgelendirme çalışması</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="_static/disqus.js"></script>
     <link rel="index" title="Dizin" href="genindex.html" />
     <link rel="search" title="Ara" href="search.html" />
-    <link rel="prev" title="2. Arduino" href="arduino.html" />
+    <link rel="prev" title="5. Neden Farklı Arduino Modelleri Var?" href="models.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
@@ -63,7 +63,7 @@
             <p class="logo">
               <a href="index.html">
                 <center>
-                <img class="logo" src="_static/logo.png" alt="Logo"/>
+                <img class="logo" src="_static/logo.png" alt="Logo" height="250"/>
                 </center>
                 
               </a>
@@ -72,6 +72,8 @@
 
             <div>
               <center>
+
+
               <hr>
               <a href="index.html">ana sayfa</a> |
               <a href="https://github.com/ard-e/ard-e.github.io">github adresi</a> |
@@ -83,18 +85,18 @@
 
             
   <div class="section" id="yapi">
-<h1>5. Yapı<a class="headerlink" href="#yapi" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<h1>8. Yapı<a class="headerlink" href="#yapi" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
 <div class="section" id="demirbaslar">
-<h2>5.1. Demirbaşlar<a class="headerlink" href="#demirbaslar" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>8.1. Demirbaşlar<a class="headerlink" href="#demirbaslar" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="setup">
-<h3>5.1.1. setup()<a class="headerlink" href="#setup" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.1.1. setup()<a class="headerlink" href="#setup" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Arduino programlarımızda vazgeçilmez iki fonksiyonumuz var, bunlardan biri setup(). setup() fonksiyonunun görevi Arduino kartına güç geldiği, yani kart ilk çalıştığı
 zaman sadece bir kere içerisindeki kodları çalıştırmak ve sonlanmak. Yani bu fonksiyonumuz Arduino&#8217;nun çalışması ile birlikte sadece bir sefer görev görüyor.
 Bundan dolayı bu fonksiyona genelde bir kere çalışmasını istediğimiz ayar komutlarımızı yazıyoruz. Örneğin hangi pinin ne iş yapacağını Arduino&#8217;ya bir kere
 bildirmemiz yeterli, o yüzden setup() fonksiyonuna yazıyoruz.</p>
 </div>
 <div class="section" id="loop">
-<h3>5.1.2. loop()<a class="headerlink" href="#loop" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.1.2. loop()<a class="headerlink" href="#loop" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Arduino programlarımızda olmazsa olmaz fonksiyonlardan 2.si loop(). loop() fonksiyonu içerisine yazılan kodlar setup() fonksiyonu işlevini gerçekleştirip
 dinlenmeye çekildiği zaman çalışmaya başlar ve setup() fonksiyonunun aksine Arduino&#8217;nun güçü kesilene kadar çalışmaya devam eder. setup()&#8217;daki kodlarımız
 bir kere çalışıyordu hatırlıyoruzki.</p>
@@ -113,9 +115,9 @@ bir kere çalışıyordu hatırlıyoruzki.</p>
 </div>
 </div>
 <div class="section" id="kontrol-yapilari">
-<h2>5.2. Kontrol Yapıları<a class="headerlink" href="#kontrol-yapilari" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>8.2. Kontrol Yapıları<a class="headerlink" href="#kontrol-yapilari" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="if">
-<h3>5.2.1. if<a class="headerlink" href="#if" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.2.1. if<a class="headerlink" href="#if" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>if</strong> fonksiyonu diğer tüm programlama dillerinde olduğu ve adının da kendisini ifade ettiği gibi karşılaştırma işi görüyor. if İngilizcede <strong>eğer</strong> anlamına
 geliyor, yani <strong>if</strong> fonksiyonu ile eğer istediğimiz koşul gerçekleşiyor ise işlem yaptırabiliyoruz. Bu konuyu örnekle daha iyi kavrayabiliriz.</p>
 <div class="highlight-arduino"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -155,7 +157,7 @@ para &gt;= 50 (para 50&#8217;den <strong>büyük</strong> ya da 50&#8217;ye <str
 </div>
 </div>
 <div class="section" id="if-else">
-<h3>5.2.2. if...else<a class="headerlink" href="#if-else" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.2.2. if...else<a class="headerlink" href="#if-else" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>if fonksiyonunun ne işe yaradığını öğrendik. Eğer işler yolunda giderse istediğimiz fonksiyonun çalışmasını sağlıyordu. Peki ya yolunda gitmezse? İşte tam burada işin
 içine else giriyor. <strong>else</strong>&#8216;nin kelime anlamı tam olarak <strong>aksi halde</strong> yani if koşulunun aksi halinde, koşul gerçekleşmediği/sağlanmadığı durumda. if&#8217;deki örneğimizle
 devam edelim. Eğer paramız 50TL&#8217;nin altında ise ve arkadaşımıza borç veremeyeceksek mazeretimizi belirtmemiz gerekir -nezaketen-.</p>
@@ -179,7 +181,7 @@ devam edelim. Eğer paramız 50TL&#8217;nin altında ise ve arkadaşımıza bor�
 </div>
 </div>
 <div class="section" id="if-elif-else">
-<h3>5.2.3. if..elif..else<a class="headerlink" href="#if-elif-else" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.2.3. if..elif..else<a class="headerlink" href="#if-elif-else" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>if ile bir koşulu denetledik, ancak koşul doğru çıkmadı. else ile de koşul doğru değil ile yapılacakları belirledik. Koşulumuz doğru olmadığı için programımız hemen else&#8217;ye
 geçecek. Ancak biz bunu istemiyoruz, ikinci bir şans vermek istiyoruz koşula. Çünkü herkes ikinci şansı hak eder. İkinci -ve ya üçüncü, dördüncü, ....- şansı elif fonksiyonu
 ile veriyoruz. Hepsinin kelime anlamına değindik elif&#8217;in de değinelim. else ve if isimlerini miksere atınca elif çıkıyor. Çünkü işlevi de ikisinin arasında bir şey.
@@ -210,9 +212,9 @@ kısa bir süre içinde uygun olacak ve arkadaşımıza borç verebilecek duruma
 </div>
 </div>
 <div class="section" id="sozdizimi">
-<h2>5.3. Sözdizimi<a class="headerlink" href="#sozdizimi" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>8.3. Sözdizimi<a class="headerlink" href="#sozdizimi" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="noktalivirgul">
-<h3>5.3.1. ; (noktalıvirgül)<a class="headerlink" href="#noktalivirgul" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.3.1. ; (noktalıvirgül)<a class="headerlink" href="#noktalivirgul" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Her belirtiden sonra ; (noktalı virgül) konur. Örneğin;</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="nf">digitalWrite</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
@@ -232,7 +234,7 @@ kısa bir süre içinde uygun olacak ve arkadaşımıza borç verebilecek duruma
 fonksiyon2 hertürlü çalışacak. Çünkü o if&#8217;in kapsama alanında değil.</p>
 </div>
 <div class="section" id="suslu-parantez">
-<h3>5.3.2. {} (süslü parantez)<a class="headerlink" href="#suslu-parantez" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.3.2. {} (süslü parantez)<a class="headerlink" href="#suslu-parantez" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Süslü parantezler belli yerlerde, kapsama alanı belirtmek için kullanılır. Örneğin fonksiyon oluştururken hangi kodların o fonksiyona dahil olacağını belirtirken
 ya da karşılaştırma operatörlerinin (if-elseif-else) kapsama alanlarını belirlerken ve döngülerde kullanılır. <strong>{</strong> ile başlayan ifade <strong>}</strong> ile bitmek zorundadır.
 Kapsama alanı içerisine girmesini istediğimiz kodlarımızı ise bu iki parantez arasına yazarız.</p>
@@ -268,7 +270,7 @@ yazabilirsiniz.</p>
 </div>
 </div>
 <div class="section" id="yorum-satiri">
-<h3>5.3.3. // (yorum satırı)<a class="headerlink" href="#yorum-satiri" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.3.3. // (yorum satırı)<a class="headerlink" href="#yorum-satiri" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Yorum satırları aslında yoktur. Kodlarınızın arasında görünen, ama hiçbir değer taşımayan, derleme sırasında silinen satırlar düşünün. Peki bunları neden kullanırız?
 Tabikide hatırlatma amacı ile. Hemen örneklerimize geçelim.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">ledPin</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">//3. pine bağlı olan LED kırmızı</span>
@@ -282,7 +284,7 @@ Tabikide hatırlatma amacı ile. Hemen örneklerimize geçelim.</p>
 </div>
 </div>
 <div class="section" id="coklu-yorum-satiri">
-<h3>5.3.4. /* <a href="#id1"><span class="problematic" id="id2">*</span></a>/ (çoklu yorum satırı)<a class="headerlink" href="#coklu-yorum-satiri" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.3.4. /* <a href="#id1"><span class="problematic" id="id2">*</span></a>/ (çoklu yorum satırı)<a class="headerlink" href="#coklu-yorum-satiri" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Yorum satırımızın birden fazla satırdan oluşan versiyonu. Çok fazla içerik yazmanız gerektiği zaman kullanılır. /* ile başlar ve <a href="#id3"><span class="problematic" id="id4">*</span></a>/ ile biter. Bu iki belirteçin
 arasına yazılan her şey yorum olarak kabul edilir ve derlenirken görmezden gelinir.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="hll"><span class="cm">/*</span>
@@ -297,7 +299,7 @@ arasına yazılan her şey yorum olarak kabul edilir ve derlenirken görmezden g
 <p>Üstteki örnekte gördüğünüz gibi parlayan satırlar yorum olduğu için işleme tabi tutulmaz. <strong>Yorumun içinde yazılan fonksiyon da görmezden gelinir!</strong></p>
 </div>
 <div class="section" id="define">
-<h3>5.3.5. #define<a class="headerlink" href="#define" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.3.5. #define<a class="headerlink" href="#define" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Değişkenlere ve veri tiplerine henüz geçmedik ancak define deyimi bunlardan önce işlenmesi gereken bir konu. Define&#8217;nin değişkenlerden farkı, değişkenler Arduino
 üzerinde çalıştırılırken define ile bildirilenler derleyici üzerinde işleme tabi tutulur. Örneğin</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="cp">#define ledPin 5</span>
@@ -335,7 +337,7 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 </div>
 </div>
 <div class="section" id="include">
-<h3>5.3.6. #include<a class="headerlink" href="#include" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.3.6. #include<a class="headerlink" href="#include" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>include deyimini projemize dışardan kütüphane eklerken kullanıyoruz.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;avr/pgmspace.h&gt;</span><span class="cp"></span>
 
@@ -346,9 +348,9 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 </div>
 </div>
 <div class="section" id="aritmetik-operatorler">
-<h2>5.4. Aritmetik Operatörler<a class="headerlink" href="#aritmetik-operatorler" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>8.4. Aritmetik Operatörler<a class="headerlink" href="#aritmetik-operatorler" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="atama">
-<h3>5.4.1. = (atama)<a class="headerlink" href="#atama" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.4.1. = (atama)<a class="headerlink" href="#atama" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Atama operatörünü değişken belirlerken kullanıyoruz. Değişkenlerin değerlerini değiştirmek için bolca kullandığımız bir operatör.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">motorPin</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 <span class="kr">String</span> <span class="n">isim</span> <span class="o">=</span> <span class="s">&quot;ard-e&quot;</span><span class="p">;</span>
@@ -358,7 +360,7 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 </div>
 </div>
 <div class="section" id="ekleme">
-<h3>5.4.2. + (ekleme)<a class="headerlink" href="#ekleme" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.4.2. + (ekleme)<a class="headerlink" href="#ekleme" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Matematiksel işlemler için kullanılır.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">sayi1</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 <span class="kr">int</span> <span class="n">sayi2</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
@@ -371,7 +373,7 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 <strong>sonuç = değer1 + değer2;</strong></p>
 </div>
 <div class="section" id="cikarma">
-<h3>5.4.3. - (çıkarma)<a class="headerlink" href="#cikarma" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.4.3. - (çıkarma)<a class="headerlink" href="#cikarma" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Matematiksel işlemler için kullanılır.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">sayi1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="kr">int</span> <span class="n">sayi2</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
@@ -384,7 +386,7 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 <strong>sonuç = değer1 - değer2;</strong></p>
 </div>
 <div class="section" id="carpma">
-<h3>5.4.4. * (çarpma)<a class="headerlink" href="#carpma" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.4.4. * (çarpma)<a class="headerlink" href="#carpma" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Matematiksel işlemler için kullanılır.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">sayi1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="kr">int</span> <span class="n">sayi2</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
@@ -397,7 +399,7 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 <strong>sonuç = değer1 * değer2;</strong></p>
 </div>
 <div class="section" id="bolme">
-<h3>5.4.5. / (bölme)<a class="headerlink" href="#bolme" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.4.5. / (bölme)<a class="headerlink" href="#bolme" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Matematiksel işlemler için kullanılır.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">sayi1</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
 <span class="kr">int</span> <span class="n">sayi2</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
@@ -411,9 +413,9 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 </div>
 </div>
 <div class="section" id="karsilastirma-operatorleri">
-<h2>5.5. Karşılaştırma Operatörleri<a class="headerlink" href="#karsilastirma-operatorleri" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>8.5. Karşılaştırma Operatörleri<a class="headerlink" href="#karsilastirma-operatorleri" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="esitse">
-<h3>5.5.1. == (eşitse)<a class="headerlink" href="#esitse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.5.1. == (eşitse)<a class="headerlink" href="#esitse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Karşılaştırma operatörleri, bir şeyleri kontrol etmemiz gerektiğinde, duruma göre bir şeyler yapmamız gerektiğinde kullandığımız, elimiz ayağımız. İlk karşılaştırma operatörümüz
 <strong>==</strong> , kelime anlamı olarak <strong>eşitse</strong> diyebiliriz. Karıştırılmaması gereken nokta çift eşittir olması. Çünkü tek eşittir atama operatörüdür. Görev bildirirken kullanılır.</p>
 <p>Karşılaştırma operatörlerinde örneklerimizi if fonksiyonu ile vereceğiz. Eğer karşılaştırmamız doğru ise -True değer döndürür ise- if çalışacaktır.</p>
@@ -431,7 +433,7 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 <p><strong>Eşitse</strong> operatöründe kontrol edilen değişken, istenilen değer değil ise sonuç herzaman False&#8217;dir.</p>
 </div>
 <div class="section" id="esit-degilse">
-<h3>5.5.2. != (eşit değilse)<a class="headerlink" href="#esit-degilse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.5.2. != (eşit değilse)<a class="headerlink" href="#esit-degilse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>İkinci karşılaştırma operatörümüz <strong>eşit değilse</strong>. Eşitsede çift eşittir kullanıyorduk bunda da ünlem eşittir (!=) kullanacağız.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">sayi</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
 
@@ -444,7 +446,7 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 <p><strong>Eşit değilse</strong> operatöründe kontrol edilen değişken, istenilen değişken değil ise sonuç herzaman True&#8217;dir.</p>
 </div>
 <div class="section" id="kucukse">
-<h3>5.5.3. &lt; (küçükse)<a class="headerlink" href="#kucukse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.5.3. &lt; (küçükse)<a class="headerlink" href="#kucukse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Küçükse operatörümüz sayılarda kullanılır ve kontrol edilen sayı hedeften küçük ise karşılaştırma doğrudur.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">sayi</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
 
@@ -456,7 +458,7 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 <p>sayi değişkeninin değeri 51&#8217;den düşük olduğu için if fonksiyonunun içeriği çalışacak.</p>
 </div>
 <div class="section" id="buyukse">
-<h3>5.5.4. &gt; (büyükse)<a class="headerlink" href="#buyukse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.5.4. &gt; (büyükse)<a class="headerlink" href="#buyukse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Büyükse operatörümüz sayılarda kullanılır ve kontrol edilen sayı hedeften büyükse ise karşılaştırma doğrudur.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">sayi</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
 
@@ -468,14 +470,14 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 <p>sayi değişkeninin değeri 51&#8217;den düşük olduğu için if fonksiyonunun içeriği <strong>çalışmayacak.</strong></p>
 </div>
 <div class="section" id="kucuk-ya-da-esitse">
-<h3>5.5.5. &lt;= (küçük ya da eşitse)<a class="headerlink" href="#kucuk-ya-da-esitse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.5.5. &lt;= (küçük ya da eşitse)<a class="headerlink" href="#kucuk-ya-da-esitse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Not</p>
 <p class="last"><strong>küçükse</strong> operatöründen farkı bu sefer kontrol edilen değer karşılaştırılan değerden küçük <strong>ya da</strong> karşılaştırılan değere eşitse sonuç True olacak, karşılaştırma doğru olacaktır.</p>
 </div>
 </div>
 <div class="section" id="buyuk-ya-da-esitse">
-<h3>5.5.6. &gt;= (büyük ya da eşitse)<a class="headerlink" href="#buyuk-ya-da-esitse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.5.6. &gt;= (büyük ya da eşitse)<a class="headerlink" href="#buyuk-ya-da-esitse" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Not</p>
 <p class="last"><strong>büyükse</strong> operatöründen farkı bu sefer kontrol edilen değer karşılaştırılan değerden büyük <strong>ya da</strong> karşılaştırılan değere eşitse sonuç True olacak, karşılaştırma doğru olacaktır.</p>
@@ -483,9 +485,9 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 </div>
 </div>
 <div class="section" id="boolean-operatorleri">
-<h2>5.6. Boolean Operatörleri<a class="headerlink" href="#boolean-operatorleri" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>8.6. Boolean Operatörleri<a class="headerlink" href="#boolean-operatorleri" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="ve">
-<h3>5.6.1. &amp;&amp; (ve)<a class="headerlink" href="#ve" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.6.1. &amp;&amp; (ve)<a class="headerlink" href="#ve" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Düşünün ki birden fazla karşılaştırma yapmanız gerekiyor ve karşılaştırmalardan ikisi de doğruysa farklı bir işlem yaptırmanız gerekiyor. Bunu nasıl yaparsınız?
 İki if&#8217;i iç içe kullanmak bir çözüm olabilir, hadi deneyelim.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">karşılaştırma1</span><span class="p">){</span>
@@ -509,7 +511,7 @@ define deyimi iki kelimelik değer alabilir. Eşittir ile belirtilmesine gerek y
 </div>
 </div>
 <div class="section" id="ve-ya">
-<h3>5.6.2. || (ve ya)<a class="headerlink" href="#ve-ya" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.6.2. || (ve ya)<a class="headerlink" href="#ve-ya" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>||</strong> operatörünün <strong>&amp;&amp;</strong> operatöründen farkı iki karşılaştırmadan herhangi biri doğru ise sonuç doğru sayılır. Yani karşılaştırmaların hepsi yanlış olmadığı, en az bir
 tanesi doğru olduğu sürece durumu kurtarır.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">karşılaştırma1</span> <span class="o">||</span> <span class="n">karşılaştırma2</span><span class="p">){</span>
@@ -524,7 +526,7 @@ tanesi doğru olduğu sürece durumu kurtarır.</p>
 </div>
 </div>
 <div class="section" id="olumsuzsa">
-<h3>5.6.3. ! (olumsuzsa)<a class="headerlink" href="#olumsuzsa" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.6.3. ! (olumsuzsa)<a class="headerlink" href="#olumsuzsa" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Boolean veri tipine Veri Tipleri başlığında değindik. Eğer veri olumsuzsa çalışması için bu operatörü kullanırız. Örneğin,</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">x</span><span class="p">){</span>
 <span class="c1">//içerik</span>
@@ -535,9 +537,9 @@ tanesi doğru olduğu sürece durumu kurtarır.</p>
 </div>
 </div>
 <div class="section" id="basitlestiren-operatorler">
-<h2>5.7. Basitleştiren Operatörler<a class="headerlink" href="#basitlestiren-operatorler" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>8.7. Basitleştiren Operatörler<a class="headerlink" href="#basitlestiren-operatorler" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="artirma-azaltma">
-<h3>5.7.1. ++ (artırma) / &#8211; (azaltma)<a class="headerlink" href="#artirma-azaltma" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.7.1. ++ (artırma) / &#8211; (azaltma)<a class="headerlink" href="#artirma-azaltma" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Rakam değeri alan değişkenlerde (long, int, ...) bir artırma ve ya bir azaltma işlemi için bu operatörleri kullanıyoruz. Elimizde bir x değişkeni olsun ve değerini 1 arttırmak
 istiyoruz diyelim. Nasıl yaparız?</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
@@ -571,7 +573,7 @@ eğer yazdırma işlemi yapılırsa eski değeri (1 eklenmemiş hali) yazdırıl
 </div>
 </div>
 <div class="section" id="id7">
-<h3>5.7.2. += , -= , <a href="#id5"><span class="problematic" id="id6">*</span></a>= , /=<a class="headerlink" href="#id7" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>8.7.2. += , -= , <a href="#id5"><span class="problematic" id="id6">*</span></a>= , /=<a class="headerlink" href="#id7" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>x++ ve x&#8211; operatörlerinden farklı olarak (x değişken) busefer işlemimizdeki referans sayı 1 olmayacak, biz belirleyeceğiz. Kullanımları:</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">-=</span> <span class="n">y</span><span class="p">;</span>   <span class="c1">// eşdeğer ifadesi: x = x - y;</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="n">y</span><span class="p">;</span>   <span class="c1">// eşdeğer ifadesi: x = x + y;</span>
@@ -591,23 +593,23 @@ eğer yazdırma işlemi yapılırsa eski değeri (1 eklenmemiş hali) yazdırıl
 </div>
 </div>
 <div class="section" id="degiskenler">
-<h1>6. Değişkenler<a class="headerlink" href="#degiskenler" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<h1>9. Değişkenler<a class="headerlink" href="#degiskenler" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
 <div class="section" id="sabitler">
-<h2>6.1. Sabitler<a class="headerlink" href="#sabitler" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>9.1. Sabitler<a class="headerlink" href="#sabitler" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="high-low">
-<h3>6.1.1. HIGH | LOW<a class="headerlink" href="#high-low" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.1.1. HIGH | LOW<a class="headerlink" href="#high-low" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>HIGH ve LOW ifadeleri Arduino kartımızın dijital pinlerindeki güç durumunu ifade eder. HIGH enerji var, LOW enerji yok anlamına gelir. Aynı zaman da HIGH yerine 1,
 LOW yerine 0 kullanabilirsiniz. Çünkü dijital pinlerde temel mantık gücün olması ya da olmaması ile alakalıdır. Arası olamaz.</p>
 </div>
 <div class="section" id="input-output">
-<h3>6.1.2. INPUT | OUTPUT<a class="headerlink" href="#input-output" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.1.2. INPUT | OUTPUT<a class="headerlink" href="#input-output" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Bir diğer sabit değişkenlerimiz ise <strong>INPUT</strong> ile <strong>OUTPUT</strong>. Kendilerinin kelime anlamları sırasıyla <strong>GİRİŞ</strong> ve <strong>ÇIKIŞ</strong>. Arduino kartımızdaki dijital pinleri hangi amaçla
 kullanacağımızı belirlemek için kullanıyoruz. Örneğin D3 pinini (3. dijital pin) bir butondan gelen değeri okumak için kullanacaksak bunu <strong>INPUT</strong> olarak atamalıyız
 çünkü Arduino kartımıza dışarıdan bir değer gelecek, içeriye girecek. Ancak dijital pini kullanarak LED yakmak istediğimiz zaman bu pini <strong>OUTPUT</strong> olarak atamalıyız.
 Çünkü busefer güç kartımızdan çıkacak ve LED&#8217;e gidecek. pinMode() fonksiyonunda buna tekrar değineceğiz.</p>
 </div>
 <div class="section" id="input-pullup-led-builtin">
-<h3>6.1.3. INPUT_PULLUP | LED_BUILTIN<a class="headerlink" href="#input-pullup-led-builtin" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.1.3. INPUT_PULLUP | LED_BUILTIN<a class="headerlink" href="#input-pullup-led-builtin" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Aslında birbiriyle alakası olmasa da bu iki sabit değişkeni de aynı başlık altına aldım. Tek  tek inceleyeceğiz.</p>
 <p>Öncelikle <strong>INPUT_PULLUP</strong>&#8216;a bakalım. Arduino pininden bir buton ile değer okuduğumuzu var sayalım. Eğer butona basar isek pindeki değeri lojik 1 okuruz bu da enerji var
 , butona basılıyor demektir. Peki ya basılmıyor ise? Aslında ozaman lojik 0 değerini okumamız gerekir. Ancak MCU dediğimiz, Arduinomuzun üzerinde bulunan mikro denetleyicimiz
@@ -631,9 +633,9 @@ geliyor. Ancak farklı kartlar arasında bir standart oturtmak için <strong>LED
 </div>
 </div>
 <div class="section" id="veri-tipleri">
-<h2>6.2. Veri Tipleri<a class="headerlink" href="#veri-tipleri" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>9.2. Veri Tipleri<a class="headerlink" href="#veri-tipleri" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="void">
-<h3>6.2.1. void<a class="headerlink" href="#void" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.1. void<a class="headerlink" href="#void" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>void</strong> ifadesini sadece fonksiyon tanımlarken kullanıyoruz. Fonksiyonumuza sadece işlem yapacağını, işleme dair bir bilgiyi bize geri göndermeyeceğiniz ifade ediyor.
 Yani bir değer döndürmesini istemediğimiz fonksiyonlarımızda <strong>void</strong> ifadesini kullanıyoruz.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="nb">setup</span><span class="p">(){</span>
@@ -651,7 +653,7 @@ Yani bir değer döndürmesini istemediğimiz fonksiyonlarımızda <strong>void<
 </div>
 </div>
 <div class="section" id="boolean">
-<h3>6.2.2. boolean<a class="headerlink" href="#boolean" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.2. boolean<a class="headerlink" href="#boolean" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>boolean</strong> veri tipi sadece iki farklı değer alabilir. True ve False. Bir kontrol mekanizması oluşturmak istediğimizde bolca <strong>boolean</strong> değişkenden yararlanacağız.
 Ayrıca her bir boolean değişken hafızada sadece 1 byte yer kaplar.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">boolean</span> <span class="n">durum</span> <span class="o">=</span> <span class="n">True</span><span class="p">;</span>
@@ -659,7 +661,7 @@ Ayrıca her bir boolean değişken hafızada sadece 1 byte yer kaplar.</p>
 </div>
 </div>
 <div class="section" id="char">
-<h3>6.2.3. char<a class="headerlink" href="#char" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.3. char<a class="headerlink" href="#char" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>char</strong> veri tipi bir karakterlik veri tutmak istediğimiz zaman kullandığımız veri tipidir. Yine her <strong>char</strong> tipindeki değişken hafızada 1 byte yer kaplar.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">char</span> <span class="n">karakterimiz</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
 <span class="kr">char</span> <span class="n">karakterimiz</span> <span class="o">=</span> <span class="mi">65</span><span class="p">;</span>
@@ -668,7 +670,7 @@ Ayrıca her bir boolean değişken hafızada sadece 1 byte yer kaplar.</p>
 <p>A harfinin ASCII karşılığı 65. Yani her iki tanımlamada da değişkenimiz A harfini taşıyor. char veri tipi ASCII değerler de alabilir.</p>
 </div>
 <div class="section" id="byte">
-<h3>6.2.4. byte<a class="headerlink" href="#byte" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.4. byte<a class="headerlink" href="#byte" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>0-255 arasındaki sayıları binary tipinde tutabilir.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="n">B10010</span><span class="p">;</span>  <span class="c1">// &quot;B&quot; binary olduğunu ifade ediyor (B10010 = 18 decimal)</span>
                   <span class="c1">// B10010 = 18</span>
@@ -676,7 +678,7 @@ Ayrıca her bir boolean değişken hafızada sadece 1 byte yer kaplar.</p>
 </div>
 </div>
 <div class="section" id="int">
-<h3>6.2.5. int<a class="headerlink" href="#int" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.5. int<a class="headerlink" href="#int" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Rakamları tutmamız gerektiğinde başvurduğumuz ilk yol: <strong>int</strong>. Arduino UNO (ve diğer AtMEGA taşıyan kartlarda) <strong>int</strong> veri tipi 16 bit (2 byte) veri tutabilir.
 Bu da -32,768 ile 32,767 arasında bir değer taşıyabileceği anlamına geliyor. (en düşük değer -2^15 ve en yüksek değer (2^15)-1 olabilir).</p>
 <p>Arduino DUE ve SAMD taşıyan kartlarda ise (MKR1000 ve Zero gibi) <strong>int</strong> veri tipi 32 bit  (4 byte) veri tutabilir. Bu da -2,147,483,648 ile 2,147,483,647 arasında
@@ -687,7 +689,7 @@ değer tutabilir demektir. (en düşük değer -2^31 ve en yüksek değer (2^31)
 </div>
 </div>
 <div class="section" id="unsigned-int">
-<h3>6.2.6. unsigned int<a class="headerlink" href="#unsigned-int" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.6. unsigned int<a class="headerlink" href="#unsigned-int" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Arduino UNO ve diğer ATMEGA denetleyiciye sahip kartlarda <strong>unsigned int</strong> veri tipi 2 byte veri depolayabilir. Bu da 0 ile 65,535 arasında değer alabilir demek
 oluyor. ( (2^16) - 1).</p>
 <p>Arduino DUE&#8217;de <strong>unsigned int</strong> veri tipi 4 byte (32 bit) veri tutabilir. Bu da 0 ile 4,294,967,295 arasında demek oluyor. (2^32 - 1).</p>
@@ -710,14 +712,14 @@ değerine dönecektir. Aynı döngü olayı int veri tipi için de geçerlidir.<
 </div>
 </div>
 <div class="section" id="word">
-<h3>6.2.7. word<a class="headerlink" href="#word" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.7. word<a class="headerlink" href="#word" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>ATMEGA denetleyiciye sahip kartlarda 16-bit, DUE ve Zero modellerinde 32-bit sayı tutabilir. Kapasite açısından <strong>unsigned int</strong>&#8216;ten farkı yoktur.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">word</span> <span class="n">sayim</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="long">
-<h3>6.2.8. long<a class="headerlink" href="#long" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.8. long<a class="headerlink" href="#long" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>long</strong> veri tipi, <strong>int</strong> veri tipinin genişletilmiş halidir. Yine negatif-pozitif sayılar tutabilir ancak <strong>int</strong> veri tipine göre çok daha fazla kapasiteye sahiptir.
 Hafızada 32-bit (4 byte) yer kaplar ve -2,147,483,648 - 2,147,483,647 arasında değer alabilir.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">maxIntDegeri</span> <span class="o">=</span> <span class="mi">32767</span><span class="p">;</span>
@@ -726,7 +728,7 @@ Hafızada 32-bit (4 byte) yer kaplar ve -2,147,483,648 - 2,147,483,647 arasında
 </div>
 </div>
 <div class="section" id="unsigned-long">
-<h3>6.2.9. unsigned long<a class="headerlink" href="#unsigned-long" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.9. unsigned long<a class="headerlink" href="#unsigned-long" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>unsigned long</strong> ile <strong>long</strong> veri tipleri arasındaki fark aslında tam olarak <strong>unsigned int</strong> ile <strong>int</strong> arasındaki fark. Yani, <strong>long</strong> veri tipi negatif
 sayıları da tutabilirken <strong>unsigned long</strong> veri tipi negatif sayıları tutamaz ve oraya harcayacağı kapasiteyi de pozitif sayılara ekler. Yine 32-bit (4 byte)
 yer kaplar ve 0 ile 4,294,967,295 arasında değer alabilir. (2^32 - 1)</p>
@@ -737,7 +739,7 @@ yer kaplar ve 0 ile 4,294,967,295 arasında değer alabilir. (2^32 - 1)</p>
 </div>
 </div>
 <div class="section" id="short">
-<h3>6.2.10. short<a class="headerlink" href="#short" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.10. short<a class="headerlink" href="#short" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>short</strong> veri tipi 16-bit sayı depolayabilir yani -32,768 ile 32,767 arasında değer alabilir. Hatırlarsanız <strong>int</strong> veri tipimiz de 16-bit sayı depolayabiliyordu ve
 -32,768-32,767 arasında değer alıyordu. Yani bunlar aynı olmalı ozaman. Ama değiller. Çünkü <strong>int</strong> veri tipinin mikrodenetleyicinin kapasitesine göre artabilirken
 <strong>short</strong> veri tipi her zaman 16-bit veri depolayabilir.</p>
@@ -746,7 +748,7 @@ yer kaplar ve 0 ile 4,294,967,295 arasında değer alabilir. (2^32 - 1)</p>
 </div>
 </div>
 <div class="section" id="float">
-<h3>6.2.11. float<a class="headerlink" href="#float" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.11. float<a class="headerlink" href="#float" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>32-bit (4 byte) veri tutabilen bir başka veri tipi. Kendisini diğerlerinden ayıran durum ise ondalık sayıları tutabilmesi.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">float</span> <span class="n">ondalikSayim</span> <span class="o">=</span> <span class="mf">1.56</span><span class="p">;</span>
 <span class="kr">float</span> <span class="n">sensorHassasiteyi</span> <span class="o">=</span> <span class="mf">7.77</span><span class="p">;</span>
@@ -760,12 +762,12 @@ yer kaplar ve 0 ile 4,294,967,295 arasında değer alabilir. (2^32 - 1)</p>
 kaçınmanızı öneriyorum. Örneğin kritik zamanlama işlemleri.</p>
 </div>
 <div class="section" id="double">
-<h3>6.2.12. double<a class="headerlink" href="#double" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.12. double<a class="headerlink" href="#double" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>double</strong> veri tipi, <strong>float</strong> veri tipinin daha hassas versiyonudur. Ondalık kısmı daha uzun olabilir. ATMEGA&#8217;lı kartlarda 32-bit (4 byte) değer alabilirken
 Arduino DUE modelinde 64-bit (8 byte) değer alabilir.</p>
 </div>
 <div class="section" id="string">
-<h3>6.2.13. String<a class="headerlink" href="#string" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.13. String<a class="headerlink" href="#string" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Bundan önceki veri tipleri sürekli rakamlar ile alakalıydı. Bu veri tipimiz ise karakterler, harfler tutmamızı sağlıyor.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">String</span> <span class="n">arde</span> <span class="o">=</span> <span class="s">&quot;www.ard-e.github.io&quot;</span><span class="p">;</span>
 <span class="kr">String</span> <span class="n">stringim</span> <span class="o">=</span> <span class="s">&quot;Arduino, sen ne güzel bir şeysin...&quot;</span>
@@ -773,7 +775,7 @@ Arduino DUE modelinde 64-bit (8 byte) değer alabilir.</p>
 </div>
 </div>
 <div class="section" id="array">
-<h3>6.2.14. array<a class="headerlink" href="#array" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.2.14. array<a class="headerlink" href="#array" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Arraylar, yani listeler. Bazen kurtarıcı olabiliyor. Yeni başlayanların pek kullanmadığı, tercih etmediği veri tipi olsa da bilmenizde ve hatta kullanmanızda yarar var.
 Arrayların ufak bir kullanım farkı var, int/String/long gibi kullanılmıyorlar.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span> <span class="n">bizimArrayimiz</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">};</span>
@@ -811,44 +813,44 @@ değişkene de listemizin son elemanını yani beşinci elemanını atadık. Onu
 </div>
 </div>
 <div class="section" id="donusturme">
-<h2>6.3. Dönüştürme<a class="headerlink" href="#donusturme" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>9.3. Dönüştürme<a class="headerlink" href="#donusturme" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="id8">
-<h3>6.3.1. char()<a class="headerlink" href="#id8" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.3.1. char()<a class="headerlink" href="#id8" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Herhangi bir veri tipini <strong>char</strong> veri tipine dönüştürürken kullanılır.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">char</span><span class="p">(</span><span class="n">donusturulecekVeri</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id9">
-<h3>6.3.2. byte()<a class="headerlink" href="#id9" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.3.2. byte()<a class="headerlink" href="#id9" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Herhangi bir veri tipini <strong>byte</strong> veri tipine dönüştürürken kullanılır.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">byte</span><span class="p">(</span><span class="n">donusturulecekVeri</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id10">
-<h3>6.3.3. int()<a class="headerlink" href="#id10" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.3.3. int()<a class="headerlink" href="#id10" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Herhangi bir veri tipini <strong>int</strong> veri tipine dönüştürürken kullanılır.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">int</span><span class="p">(</span><span class="n">donusturulecekVeri</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id11">
-<h3>6.3.4. word()<a class="headerlink" href="#id11" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.3.4. word()<a class="headerlink" href="#id11" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Herhangi bir veri tipini <strong>word</strong> veri tipine dönüştürürken kullanılır.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">word</span><span class="p">(</span><span class="n">donusturulecekVeri</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id12">
-<h3>6.3.5. long()<a class="headerlink" href="#id12" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.3.5. long()<a class="headerlink" href="#id12" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Herhangi bir veri tipini <strong>long</strong> veri tipine dönüştürürken kullanılır.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">long</span><span class="p">(</span><span class="n">donusturulecekVeri</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id13">
-<h3>6.3.6. float()<a class="headerlink" href="#id13" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>9.3.6. float()<a class="headerlink" href="#id13" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Herhangi bir veri tipini <strong>float</strong> veri tipine dönüştürürken kullanılır.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">float</span><span class="p">(</span><span class="n">donusturulecekVeri</span><span class="p">);</span>
 </pre></div>
@@ -857,11 +859,11 @@ değişkene de listemizin son elemanını yani beşinci elemanını atadık. Onu
 </div>
 </div>
 <div class="section" id="fonksiyonlar">
-<h1>7. Fonksiyonlar<a class="headerlink" href="#fonksiyonlar" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<h1>10. Fonksiyonlar<a class="headerlink" href="#fonksiyonlar" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
 <div class="section" id="dijital-giris-cikis">
-<h2>7.1. Dijital Giriş/Çıkış<a class="headerlink" href="#dijital-giris-cikis" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>10.1. Dijital Giriş/Çıkış<a class="headerlink" href="#dijital-giris-cikis" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="pinmode">
-<h3>7.1.1. pinmode()<a class="headerlink" href="#pinmode" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.1.1. pinmode()<a class="headerlink" href="#pinmode" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Arduino kartımız üzerindeki dijital pinleri kullanırken Arduino&#8217;ya hangi amaçla kullanacağımızı belirtmemiz gerekiyor demiştik. Bu fonksiyon tam da bu işi görüyor.
 Pinin görevini bir kere tanımlayıp daha sonrasında pin üzerindeki gücü kontrol ettiğimiz için <strong>pinmode()</strong> fonksiyonunu genelde setup() fonksiyonu içerisinde kullanıyoruz.
 Hatırlarsanız ki setup() fonksiyonu her Arduino başlatıldığında sadece bir kere çalışıyordu. Eğer pin modunu sürekli değiştirmeyecek iseniz loop() içerisinde kullanmanız
@@ -880,7 +882,7 @@ gereksiz kaynak tüketimine sebep olur. Size de setup() içerisinde kullanmanız
 </div>
 </div>
 <div class="section" id="digitalwrite">
-<h3>7.1.2. digitalWrite()<a class="headerlink" href="#digitalwrite" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.1.2. digitalWrite()<a class="headerlink" href="#digitalwrite" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Arduino kartımızın dijital pinlerindeki gücü kontrol ederken bu komutu kullanıyoruz. Bu komutu pindeki güç durumunu kontrol etmek için kullanabilmemiz için daha
 öncesinde <strong>pinMode()</strong> ile pini OUTPUT olarak ayarlamış olmamız gerekiyor.</p>
 <p><strong>digitalWrite()</strong> ile kullanabileceğimiz iki değer var, <strong>HIGH</strong> ve <strong>LOW</strong>. Sırasıyla 5V (3v3 kartlarda 3.3V) ve 0V (yani toprak) değerlerine eşdeğerler. Örnek
@@ -924,7 +926,7 @@ komutunu analog pinler üzerinde de kullanabilirsiniz.</p>
 </div>
 </div>
 <div class="section" id="digitalread">
-<h3>7.1.3. digitalRead()<a class="headerlink" href="#digitalread" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.1.3. digitalRead()<a class="headerlink" href="#digitalread" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Dijital pin üzerindeki gücü kontrol etmek için kullanılır. Buton bağladığınız pin üzerindeki güç size butona basılıp basılmadığını söyler. Bunu takip ederek butona
 basılıp basılmadığını kontrol edebilirsiniz.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="cp">#define butonPin 3</span>
@@ -967,9 +969,9 @@ basılıp basılmadığını kontrol edebilirsiniz.</p>
 </div>
 </div>
 <div class="section" id="analog-giris-cikis">
-<h2>7.2. Analog Giriş/Çıkış<a class="headerlink" href="#analog-giris-cikis" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>10.2. Analog Giriş/Çıkış<a class="headerlink" href="#analog-giris-cikis" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="analodread">
-<h3>7.2.1. analodRead()<a class="headerlink" href="#analodread" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.2.1. analodRead()<a class="headerlink" href="#analodread" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Analog pin üzerindeki gücü okurken kullanılır. Arduino kartları 6 kanallı (Mini ve Nano modellerinde 8 kanal, Mega modelinde 16 kanal), 10-bitlik analog-dijital
 çeviriciye sahip. Bu da 0-5V arasındaki değerler okunduğunda 0-1023 arasında bir değerle karşılaşılacağı anlamına gelir. 0 değeri 0V&#8217;u 1023 değeri ise 5V&#8217;u temsil
 eder. Buna orantılı olarak ara değerleri okumak mümkündür. Dijital pinlerde ise güç ya vardır ya yoktur, 3V/4V olmadı bir şey değiştirmez. Her bir değer yaklaşık
@@ -989,7 +991,7 @@ olarak 0.0049 volt&#8217;a eşdeğerdir. (4.9 mV)</p>
 </div>
 </div>
 <div class="section" id="analogwrite">
-<h3>7.2.2. analogWrite()<a class="headerlink" href="#analogwrite" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.2.2. analogWrite()<a class="headerlink" href="#analogwrite" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <div class="admonition attention">
 <p class="first admonition-title">Dikkat</p>
 <p class="last">analogWrite() fonksiyonunun sadece ne işe yaradığına ve nasıl kullanıldığına değineceğiz. Geniş bilgi almak, teorisini öğrenmek için
@@ -1051,9 +1053,9 @@ orantılı olarak hesaplanabilir. Örneğin 153 değeri 3V&#8217;a eşdeğerdir.
 </div>
 </div>
 <div class="section" id="zaman-sure">
-<h2>7.3. Zaman/Süre<a class="headerlink" href="#zaman-sure" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>10.3. Zaman/Süre<a class="headerlink" href="#zaman-sure" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="millis">
-<h3>7.3.1. millis()<a class="headerlink" href="#millis" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.3.1. millis()<a class="headerlink" href="#millis" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Arduino&#8217;nun çalışmaya başlamasından sonra geçen zamanı milisaniye cinsinden sayar.</p>
 <div class="admonition caution">
 <p class="first admonition-title">Uyarı</p>
@@ -1076,7 +1078,7 @@ Bunun sebebi <strong>unsigned long</strong> veri tipini kullanmasıdır.</p>
 </div>
 </div>
 <div class="section" id="micros">
-<h3>7.3.2. micros()<a class="headerlink" href="#micros" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.3.2. micros()<a class="headerlink" href="#micros" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Arduino&#8217;nun çalışmaya başlamasından sonra geçen zamanı mikrosaniye cinsinden sayar. millis() fonksiyonu ise milisaniye cinsinden sayıyordu. Daha hassas hesaplama
 gerektiren işlemlerde micros() fonksiyonunu tercih ediyoruz.</p>
 <p>1 milisaniye = 1.000 mikrosaniye
@@ -1102,7 +1104,7 @@ millis() fonksiyonunda bu süre yaklaşık 50gün.</p>
 </div>
 </div>
 <div class="section" id="delay">
-<h3>7.3.3. delay()<a class="headerlink" href="#delay" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.3.3. delay()<a class="headerlink" href="#delay" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Verdiğiniz sayı değeri kadar programın çalışmasını durdurur (milisaniye cinsinden). Eğer 1000 değerini verirsiniz programınız 1 saniye boyunca çalışmayacak,
 bekleme moduna geçecektir.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="nb">setup</span><span class="p">(){</span>
@@ -1126,14 +1128,14 @@ Ayrıca bu sırada diğer işlemler de devam edecektir.</p>
 </div>
 </div>
 <div class="section" id="delaymicroseconds">
-<h3>7.3.4. delayMicroseconds()<a class="headerlink" href="#delaymicroseconds" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.3.4. delayMicroseconds()<a class="headerlink" href="#delaymicroseconds" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Programımızı mikrosaniye cinsinden hassaslıkta durdurmamız gerektiğinde <strong>delayMicroseconds()</strong> fonksiyonunu kullanırız. Alabileceği en yüksek değer 16383&#8217;dür.</p>
 </div>
 </div>
 <div class="section" id="matematik">
-<h2>7.4. Matematik<a class="headerlink" href="#matematik" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>10.4. Matematik<a class="headerlink" href="#matematik" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="min">
-<h3>7.4.1. min()<a class="headerlink" href="#min" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.4.1. min()<a class="headerlink" href="#min" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>İki sayısal değerden hangisi küçük ise o değeri döndürecektir.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="n">sensor</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="n">sensor</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span> <span class="c1">// sensor degiskeni, sensor ve 100&#39;den hangisi küçükse o olacak</span>
                            <span class="c1">// böylelikle sensor değeri asla 100&#39;ü geçemeyecek</span>
@@ -1141,7 +1143,7 @@ Ayrıca bu sırada diğer işlemler de devam edecektir.</p>
 </div>
 </div>
 <div class="section" id="max">
-<h3>7.4.2. max()<a class="headerlink" href="#max" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.4.2. max()<a class="headerlink" href="#max" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>min()</strong> fonksiyonunun tam tersi. İki sayısal değerden hangisi daha büyük ise o değeri döndürür.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="n">sensor</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">sensor</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span> <span class="c1">// sensor degiskeni, sensor ve 100&#39;den hangisi büyükse o olacak</span>
                           <span class="c1">// böylelikle değer 20den aşağıya hiç düşmeyecek</span>
@@ -1149,7 +1151,7 @@ Ayrıca bu sırada diğer işlemler de devam edecektir.</p>
 </div>
 </div>
 <div class="section" id="abs">
-<h3>7.4.3. abs()<a class="headerlink" href="#abs" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.4.3. abs()<a class="headerlink" href="#abs" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Sayının mutlak değerini almak için kullanılır.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -1181,7 +1183,7 @@ Ayrıca bu sırada diğer işlemler de devam edecektir.</p>
 </div>
 </div>
 <div class="section" id="constrain">
-<h3>7.4.4. constrain()<a class="headerlink" href="#constrain" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.4.4. constrain()<a class="headerlink" href="#constrain" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Bir sayısal değeri sınırlamak için kullanılır. Örnek ile daha iyi anlayabiliriz.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="n">sensor</span> <span class="o">=</span> <span class="nf">constrain</span><span class="p">(</span><span class="n">sensor</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">150</span><span class="p">);</span>
 <span class="c1">// sensor degeri herzaman 10 ile 150 arasında olacak</span>
@@ -1217,7 +1219,7 @@ Ayrıca bu sırada diğer işlemler de devam edecektir.</p>
 </table>
 </div>
 <div class="section" id="map">
-<h3>7.4.5. map()<a class="headerlink" href="#map" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.4.5. map()<a class="headerlink" href="#map" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>map()</strong> fonksiyonu sayının değer aralığını değiştirmek için kullanılır. Örneğin analog pinlerden okunan değer 0-1023 aralığındayken PWM pinlerden yazdırma
 aralığı 0-255&#8217;dir. Potansiyometreden okunan değeri LED&#8217;e yazdırmak için <strong>map()</strong> fonksiyonu ile gelen aralığı değiştirebiliriz.</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">void</span> <span class="nb">setup</span><span class="p">(){</span>
@@ -1261,7 +1263,7 @@ aralığı 0-255&#8217;dir. Potansiyometreden okunan değeri LED&#8217;e yazdır
 </div>
 </div>
 <div class="section" id="pow">
-<h3>7.4.6. pow()<a class="headerlink" href="#pow" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.4.6. pow()<a class="headerlink" href="#pow" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Üs alma işlemi için kullanılır.</p>
 <p><strong>Kullanım Şekli</strong></p>
 <p>pow(x, n);</p>
@@ -1278,36 +1280,36 @@ aralığı 0-255&#8217;dir. Potansiyometreden okunan değeri LED&#8217;e yazdır
 </table>
 </div>
 <div class="section" id="sqrt">
-<h3>7.4.7. sqrt()<a class="headerlink" href="#sqrt" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.4.7. sqrt()<a class="headerlink" href="#sqrt" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Karekök işlemi için kullanılır.</p>
 <p><strong>Kullanım Şekli</strong></p>
 <p>sqrt(sayi);</p>
 </div>
 </div>
 <div class="section" id="string-degerlendirme">
-<h2>7.5. String Değerlendirme<a class="headerlink" href="#string-degerlendirme" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>10.5. String Değerlendirme<a class="headerlink" href="#string-degerlendirme" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="isalphanumeric">
-<h3>7.5.1. isAlphaNumeric()<a class="headerlink" href="#isalphanumeric" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.5.1. isAlphaNumeric()<a class="headerlink" href="#isalphanumeric" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Fonksiyona verdiğiniz String değişkeni alfanümerik <a class="footnote-reference" href="#id15" id="id14">[1]</a> ise <strong>True</strong> sonuç döndürecektir. Aksi durumda <strong>False</strong> sonucu döndürecek.</p>
 </div>
 <div class="section" id="isalpha">
-<h3>7.5.2. isAlpha()<a class="headerlink" href="#isalpha" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.5.2. isAlpha()<a class="headerlink" href="#isalpha" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Kontrol ettiğiniz string harflerden oluşuyorsa <strong>True</strong> aksi durumlar söz konusu ise -stringin içinde rakam ya da özel karakter var ise- <strong>False</strong> değeri döndürecektir.</p>
 </div>
 <div class="section" id="isdigit">
-<h3>7.5.3. isDigit()<a class="headerlink" href="#isdigit" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.5.3. isDigit()<a class="headerlink" href="#isdigit" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Kontrol ettiğiniz string rakamlardan oluşuyorsa <strong>True</strong> aksi durumlar söz konusu ise -stringin içinde harf ya da özel karakter var ise- <strong>False</strong> değeri döndürecektir.</p>
 </div>
 <div class="section" id="islowercase">
-<h3>7.5.4. isLowerCase()<a class="headerlink" href="#islowercase" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.5.4. isLowerCase()<a class="headerlink" href="#islowercase" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Stringimiz küçük harflerden oluşuyor ise <strong>True</strong> değeri döndürecek, büyük harf içeriyorsa <strong>False</strong> değeri döndürecektir.</p>
 </div>
 <div class="section" id="isuppercase">
-<h3>7.5.5. isUpperCase()<a class="headerlink" href="#isuppercase" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.5.5. isUpperCase()<a class="headerlink" href="#isuppercase" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Stringimiz büyük harflerden oluşuyor ise <strong>True</strong> değeri döndürecek, küçük harf içeriyorsa <strong>False</strong> değeri döndürecektir.</p>
 </div>
 <div class="section" id="ornek-uygulama">
-<h3>7.5.6. Örnek Uygulama<a class="headerlink" href="#ornek-uygulama" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.5.6. Örnek Uygulama<a class="headerlink" href="#ornek-uygulama" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p><strong>String Değerlendirme</strong> başlığı altında gördüğümüz tüm fonksiyonları kapsayan bir uygulama örneği ile bu başlığı kapatalım. Bu örneği Arduino kartınıza yükleyip
 seri monitörü açarak kullanabilirsiniz. (Seri monitör konusuna <strong>İletişim</strong> başlığı altında detaylıca değineceğiz.)</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span> <span class="cm">/*</span>
@@ -1381,9 +1383,9 @@ seri monitörü açarak kullanabilirsiniz. (Seri monitör konusuna <strong>İlet
 </div>
 </div>
 <div class="section" id="rastgele-sayilar">
-<h2>7.6. Rastgele Sayılar<a class="headerlink" href="#rastgele-sayilar" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>10.6. Rastgele Sayılar<a class="headerlink" href="#rastgele-sayilar" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div class="section" id="random">
-<h3>7.6.1. random()<a class="headerlink" href="#random" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<h3>10.6.1. random()<a class="headerlink" href="#random" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
 <p>Rastgele sayı üretmenizi sağlar. İki değer alabildiği gibi tek değer de alabilir. Eğer tek değer verirseniz -verdiğiniz değere X diyelim- 0-X arasında rastgele
 sayı üretecektir. Eğer iki sayısal değer verirseniz verdiğiniz değerler arasında rastgele bir sayı seçecektir (maks değerin bir eksiği esas alınır).</p>
 <div class="highlight-arduino"><div class="highlight"><pre><span></span><span class="kr">long</span> <span class="n">sayi</span><span class="p">;</span>
@@ -1408,7 +1410,7 @@ sayı üretecektir. Eğer iki sayısal değer verirseniz verdiğiniz değerler a
 </div>
 </div>
 <div class="section" id="seri-haberlesme">
-<h2>7.7. Seri Haberleşme<a class="headerlink" href="#seri-haberlesme" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<h2>10.7. Seri Haberleşme<a class="headerlink" href="#seri-haberlesme" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
 <div data-disqus-identifier="functions" data-disqus-shortname="ard-e" id="disqus_thread"></div></div>
 </div>
 

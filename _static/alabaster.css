@@ -55,7 +55,7 @@
 /* -- page layout ----------------------------------------------------------- */
 
 body {
-    font-family: Ubuntu Monospace;
+    font-family: droid_sansregular;
     font-size: 17px;
     background-color: #fff;
     color: #000;
@@ -111,7 +111,7 @@ div.footer a {
 }
 
 p.caption {
-    font-family: Ubuntu;
+    font-family: Droid Sans;
     font-size: inherit;
 }
 
@@ -120,11 +120,10 @@ p.caption {
 div.sphinxsidebar a {
     color: #444;
     text-decoration: none;
-    border-bottom: 1px dotted #999;
 }
 
 div.sphinxsidebar a:hover {
-    border-bottom: 1px solid #999;
+
 }
 
 div.sphinxsidebarwrapper {
@@ -164,7 +163,7 @@ div.sphinxsidebarwrapper p.blurb {
 
 div.sphinxsidebar h3,
 div.sphinxsidebar h4 {
-    font-family: Ubuntu;
+    font-family: droid_sansregular;
     color: #444;
     font-size: 24px;
     font-weight: normal;
@@ -208,7 +207,7 @@ div.sphinxsidebar ul li.toctree-l2 > a {
 
 div.sphinxsidebar input {
     border: 1px solid #CCC;
-    font-family: Ubuntu Monospace;
+    font-family: droid_sansregular;
     font-size: 1em;
 }
 
@@ -232,7 +231,7 @@ a {
 
 a:hover {
     color: #6D4100;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 div.body h1,
@@ -241,7 +240,7 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: Ubuntu;
+    font-family: droid_sansregular;
     font-weight: normal;
     margin: 30px 0px 10px 0px;
     padding: 0;
@@ -287,7 +286,7 @@ dd div.admonition {
 }
 
 div.admonition p.admonition-title {
-    font-family: Ubuntu;
+    font-family: droid_sansregular;
     font-weight: normal;
     font-size: 24px;
     margin: 0 0 10px 0;
@@ -405,14 +404,14 @@ img.screenshot {
 }
 
 table.docutils {
-    border: 1px solid #888;
+    border: 1px solid none;
     -moz-box-shadow: 2px 2px 4px #EEE;
     -webkit-box-shadow: 2px 2px 4px #EEE;
     box-shadow: 2px 2px 4px #EEE;
 }
 
-table.docutils td, table.docutils th {
-    border: 1px solid #888;
+table.docutils td, .docutils th {
+    border: 1px solid none;
     padding: 0.25em 0.7em;
 }
 
@@ -521,27 +520,26 @@ tt.xref, code.xref, a tt {
 
 a.reference {
     text-decoration: none;
-    border-bottom: 1px dotted #004B6B;
 }
 
 /* Don't put an underline on images */
 a.image-reference, a.image-reference:hover {
     border-bottom: none;
+    text-decoration: none;
 }
 
 a.reference:hover {
-    border-bottom: 1px solid #6D4100;
+    text-decoration: none;
 }
 
 a.footnote-reference {
     text-decoration: none;
     font-size: 0.7em;
     vertical-align: top;
-    border-bottom: 1px dotted #004B6B;
 }
 
 a.footnote-reference:hover {
-    border-bottom: 1px solid #6D4100;
+    text-decoration: none;
 }
 
 a:hover tt, a:hover code {
@@ -614,6 +612,7 @@ a:hover tt, a:hover code {
     body {
         margin: 0;
         padding: 20px 30px;
+        text-decoration:none;
     }
 
     div.documentwrapper {

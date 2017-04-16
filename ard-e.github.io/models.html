@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5. Neden Farklı Arduino Modelleri Var? &#8212; ard-e alpha belgelendirme çalışması</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Dizin" href="genindex.html" />
+    <link rel="search" title="Ara" href="search.html" />
+    <link rel="next" title="8. Yapı" href="functions.html" />
+    <link rel="prev" title="2. Arduino" href="arduino.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Droid+Sans">
+
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  <link rel=”manifest” href=”/manifest.json”>
+  <script src=”https://cdn.onesignal.com/sdks/OneSignalSDK.js” async></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "18c9a893-4b9a-449a-ad52-265935a95845",
+      autoRegister: false,
+      notifyButton: {
+          enable: true /* Set to false to hide */
+        }
+    }]);
+  </script>
+
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+
+            
+            <p class="logo">
+              <a href="index.html">
+                <center>
+                <img class="logo" src="_static/logo.png" alt="Logo" height="250"/>
+                </center>
+                
+              </a>
+            </p>
+            
+
+            <div>
+              <center>
+
+
+              <hr>
+              <a href="index.html">ana sayfa</a> |
+              <a href="https://github.com/ard-e/ard-e.github.io">github adresi</a> |
+              <a href="_sources/models.rst.txt"
+                  rel="nofollow">ham sayfa</a>
+              <hr>
+             </center>
+            </p>
+
+            
+  <div class="section" id="neden-farkli-arduino-modelleri-var">
+<h1>5. Neden Farklı Arduino Modelleri Var?<a class="headerlink" href="#neden-farkli-arduino-modelleri-var" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<p>Arduino, geniş ürün yelpazesine sahip bir marka. Peki neden farklı farklı model çıkarma ihtiyacı duymuşlar? Bu tamamen bizim için, projelerimiz
+için bir güzellik aslında. Projenize yönelik, spesifik bir Arduino modeli bulabiliyorsunuz. Örneğin nesnelerin interneti konseptine akıllı saksı
+yaptınız ve saksınıza elektrikler yokken de çalışabilmesi için batarya eklemek istiyorsunuz. Arduino Uno ve Li-Po -li-po bataryalar alandan
+tasarruf için en uygun bataryalar- şarj devresi ile bu işi çözebilirsiniz. Ya da direk Arduino MKR1000 kullanabilirsiniz, MKR1000 üzerinde
+Li-Po şarj devresi de bulundurduğu için harici bir devreye ihtiyacınız kalmıyor.</p>
+</div>
+<div class="section" id="arduino-modelleri">
+<h1>6. Arduino Modelleri<a class="headerlink" href="#arduino-modelleri" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+<div class="section" id="giris-seviyesi">
+<h2>6.1. Giriş Seviyesi<a class="headerlink" href="#giris-seviyesi" title="Bu başlığın kalıcı bağlantısı">¶</a></h2>
+<div class="section" id="arduino-uno">
+<h3>6.1.1. Arduino UNO<a class="headerlink" href="#arduino-uno" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<p>En yaygın kullanılan Arduino modeli. Bunun sebebi, direk alıp kullanabilmeniz -örneğin bazı Arduino modellerinde alandan tasarruf için usb-ttl
+çevirici entegresi bulunmuyor ve arabirim kullanmamız gerekiyor-, internette en yaygın örnek gösterilen model olması, ulaşması en kolay olan
+model olması ve ucuz modellerden biri olması diyebiliriz. Herhangi kendine has bir özelliği bulunmuyor. Genelde Arduino Shield&#8217;leri Uno
+modelindeki pin dizilimlerine göre yapıldığı için Shield&#8217;ler ile uyumludur.</p>
+<a class="reference internal image-reference" href="_images/uno.png"><img alt="_images/uno.png" src="_images/uno.png" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Mikrodenetleyici</td>
+<td>Atmega328P</td>
+</tr>
+<tr class="row-even"><td>Çalışma Gerilimi</td>
+<td>5V</td>
+</tr>
+<tr class="row-odd"><td>Giriş Gerilimi (önerilen)</td>
+<td>7-12V</td>
+</tr>
+<tr class="row-even"><td>Giriş Gerilimi (limit)</td>
+<td>6-20V</td>
+</tr>
+<tr class="row-odd"><td>Dijital G/Ç Pinleri</td>
+<td>14</td>
+</tr>
+<tr class="row-even"><td>PWM Destekleyen Dijital Pinler</td>
+<td>6</td>
+</tr>
+<tr class="row-odd"><td>Analog Giriş Pinleri</td>
+<td>6</td>
+</tr>
+<tr class="row-even"><td>G/Ç Pini Başına Düşen Akım (max)</td>
+<td>20 mA</td>
+</tr>
+<tr class="row-odd"><td>3v3 Pinine Düşen Akım (max)</td>
+<td>50 mA</td>
+</tr>
+<tr class="row-even"><td>Flash  Hafıza</td>
+<td>32KB (0.5KB&#8217;ını kendisi kullanıyor)</td>
+</tr>
+<tr class="row-odd"><td>SRAM</td>
+<td>2KB</td>
+</tr>
+<tr class="row-even"><td>EEPROM</td>
+<td>1KB</td>
+</tr>
+<tr class="row-odd"><td>Clock Speed</td>
+<td>16MHz</td>
+</tr>
+<tr class="row-even"><td>Ölçüleri</td>
+<td>68.6x53.4mm 25gr</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="arduino-leonardo">
+<h3>6.1.2. Arduino Leonardo<a class="headerlink" href="#arduino-leonardo" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<p>Arduino Leonardo&#8217;nun pin bağlantı şeması UNO modeli ile aynı olduğu için onda geçerli olan shieldlerle tam uyumluluk durumu Leonardo için de geçerli. Leonardo farklı
+olarak ATmega32u4 mikrodenetleyiciye sahip. Bu denetleyicinin özelliği ise -pin sayılarının farklı olması, hafıza farkı dışında, radikal özelliği- dahili USB bağlantı
+özelliği bulundurması. Yani Leonardo&#8217;yu bilgisayara taktığınızda bilgisayar bir fare/klavye takmışsınız gibi hemen tanıyacaktır. Ekstra bir işleme, driver kurulumuna
+gerek kalmaz. Bu özelliği sayesinde Fare ve Klavye gibi davranabilir ve farenin konumunu kontrol edip klavye gibi girdi işlemleri yaptırabilir.</p>
+<a class="reference internal image-reference" href="_images/leonardo.png"><img alt="_images/leonardo.png" src="_images/leonardo.png" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Mikrodenetleyici</td>
+<td>ATmega32u4</td>
+</tr>
+<tr class="row-even"><td>Çalışma Gerilimi</td>
+<td>5V</td>
+</tr>
+<tr class="row-odd"><td>Giriş Gerilimi (önerilen)</td>
+<td>7-12V</td>
+</tr>
+<tr class="row-even"><td>Giriş Gerilimi (limit)</td>
+<td>6-20V</td>
+</tr>
+<tr class="row-odd"><td>Dijital G/Ç Pinleri</td>
+<td>20</td>
+</tr>
+<tr class="row-even"><td>PWM Destekleyen Dijital Pinler</td>
+<td>7</td>
+</tr>
+<tr class="row-odd"><td>Analog Giriş Pinleri</td>
+<td>12</td>
+</tr>
+<tr class="row-even"><td>G/Ç Pini Başına Düşen Akım (max)</td>
+<td>40 mA</td>
+</tr>
+<tr class="row-odd"><td>3v3 Pinine Düşen Akım (max)</td>
+<td>50 mA</td>
+</tr>
+<tr class="row-even"><td>Flash  Hafıza</td>
+<td>32KB (4KB&#8217;ını kendisi kullanıyor)</td>
+</tr>
+<tr class="row-odd"><td>SRAM</td>
+<td>2.5KB</td>
+</tr>
+<tr class="row-even"><td>EEPROM</td>
+<td>1KB</td>
+</tr>
+<tr class="row-odd"><td>Clock Speed</td>
+<td>16MHz</td>
+</tr>
+<tr class="row-even"><td>Ölçüleri</td>
+<td>68.6x53.3mm 20gr</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="arduino-esplora">
+<h3>6.1.3. Arduino Esplora<a class="headerlink" href="#arduino-esplora" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<p>Arduino Esplora, gameboy, PSP gibi el oyun konsolu geliştirmek isteyenler için üretilen bir kart. Bu sonucu çıkarmamız için tasarımına bakmamız yeterli. Üzerindeki donanımlar:</p>
+<ul class="simple">
+<li>Joystick</li>
+<li>Reosta</li>
+<li>Isı Sensörü</li>
+<li>Accelerometer</li>
+<li>Mikrofon</li>
+<li>Işık Sensörü</li>
+<li>Ses ve Işık Çıkışları</li>
+<li>Sensör Girişleri</li>
+<li>TFT Ekran Girişleri</li>
+</ul>
+<a class="reference internal image-reference" href="_images/esplora.png"><img alt="_images/esplora.png" src="_images/esplora.png" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Mikrodenetleyici</td>
+<td>ATmega32u4</td>
+</tr>
+<tr class="row-even"><td>Çalışma Gerilimi</td>
+<td>5V</td>
+</tr>
+<tr class="row-odd"><td>SRAM</td>
+<td>2.5KB</td>
+</tr>
+<tr class="row-even"><td>EEPROM</td>
+<td>1KB</td>
+</tr>
+<tr class="row-odd"><td>Clock Speed</td>
+<td>16MHz</td>
+</tr>
+<tr class="row-even"><td>Ölçüleri</td>
+<td>164.04x60mm 53gr</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="arduino-nano">
+<h3>6.1.4. Arduino Nano<a class="headerlink" href="#arduino-nano" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<p>Arduino Nano modeli UNO modeli ile aynı mikrodenetleyiciye sahip ve aynı pin giriş/çıkışlarına sahip. Ancak kendisinin tasarımı UNO&#8217;dan farklı olduğu için UNO&#8217;ya uyan
+shieldler Nano modeline sığmıyor. Peki neden böyle farklı bir yol izleyip farklı bir tasarım yapılmış? Sebebi tamamen boyuttan tasarruf. UNO 25gr iken Nano sadece 7gr.</p>
+<a class="reference internal image-reference" href="_images/nano.png"><img alt="_images/nano.png" src="_images/nano.png" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Mikrodenetleyici</td>
+<td>ATmega328</td>
+</tr>
+<tr class="row-even"><td>Çalışma Gerilimi</td>
+<td>5V</td>
+</tr>
+<tr class="row-odd"><td>Giriş Gerilimi (limit)</td>
+<td>7-12V</td>
+</tr>
+<tr class="row-even"><td>Dijital G/Ç Pinleri</td>
+<td>22</td>
+</tr>
+<tr class="row-odd"><td>PWM Destekleyen Dijital Pinler</td>
+<td>6</td>
+</tr>
+<tr class="row-even"><td>Analog Giriş Pinleri</td>
+<td>8</td>
+</tr>
+<tr class="row-odd"><td>G/Ç Pini Başına Düşen Akım (max)</td>
+<td>40 mA</td>
+</tr>
+<tr class="row-even"><td>Flash  Hafıza</td>
+<td>32KB (2KB&#8217;ını kendisi kullanıyor)</td>
+</tr>
+<tr class="row-odd"><td>SRAM</td>
+<td>2KB</td>
+</tr>
+<tr class="row-even"><td>EEPROM</td>
+<td>1KB</td>
+</tr>
+<tr class="row-odd"><td>Clock Speed</td>
+<td>16MHz</td>
+</tr>
+<tr class="row-even"><td>Ölçüleri</td>
+<td>18x45mm 7gr</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="arduino-mini">
+<h3>6.1.5. Arduino Mini<a class="headerlink" href="#arduino-mini" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+<p>Arduino Mini, Nano ve dolayısıyla UNO ile aynı mikrodenetleyiciye -bu demek oluyor ki aynı pin giriş çıkışlarına ve hafızaya- sahip. Arduino Nano&#8217;nun UNO&#8217;dan farklı olarak
+boyutu olduğunu söylemiştik. Mini modeli ise Nano modelinden de minimal, küçük, tatlı, drone dostu bir kart. Ancak bu ünvanları kazanırken usb-ttl çevirici entegresinden fedakarlık
+etmiş. Bu demek oluyor ki Mini modelini direk USB kablosu ile bağlayıp programlayamıyoruz, bir arabirim gerekli. Ayrıca fiyat olarak da en uygun fiyata sahip modellerden biri
+olduğu için fazlaca Arduino gerektiren projeleriniz için ideal bir model olabilir.</p>
+</div>
+<div class="section" id="arduino-micro">
+<h3>6.1.6. Arduino Micro<a class="headerlink" href="#arduino-micro" title="Bu başlığın kalıcı bağlantısı">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="section" id="diger-gelistirme-kartlari">
+<h1>7. Diğer Geliştirme Kartları<a class="headerlink" href="#diger-gelistirme-kartlari" title="Bu başlığın kalıcı bağlantısı">¶</a></h1>
+</div>
+
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Ard-e Buğra İŞGÜZAR.
+      <br />
+      Ard-e Arduino dökümanlarının tamamının kopyalanması, kaynak gösterilmeden internet <br /> sitelerinde paylaşılması ve izin alınmadan  yazılı dökümanlarda kullanılması yasaktır.
+    </div>
+
+    
+  </body>
+</html>
