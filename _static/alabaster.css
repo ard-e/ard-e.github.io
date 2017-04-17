@@ -55,7 +55,7 @@
 /* -- page layout ----------------------------------------------------------- */
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Droid Sans", sans-serif;
     font-size: 17px;
     background-color: #fff;
     color: #000;
@@ -111,7 +111,7 @@ div.footer a {
 }
 
 p.caption {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Droid Sans", sans-serif;
     font-size: inherit;
 }
 
@@ -240,7 +240,7 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Droid Sans", sans-serif;
     font-weight: normal;
     margin: 30px 0px 10px 0px;
     padding: 0;
